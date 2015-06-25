@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>idiazroncero</title>
+    <description>Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 26 Jun 2015 00:01:57 +0200</pubDate>
+    <lastBuildDate>Fri, 26 Jun 2015 00:01:57 +0200</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Unas palabras sobre este blog</title>
+        <description>&lt;p&gt;Si escribir unas líneas de presentación siempre es complicado, esto es aún más cierto cuando la persona detrás del teclado es más bien enemiga de los focos.&lt;/p&gt;
+
+&lt;p&gt;El caso es que un blog personal, mal que me pese, está ligado necesariamente a &lt;em&gt;alguien&lt;/em&gt; que afirma hacer &lt;em&gt;algo&lt;/em&gt; y que, en este fuego de vanidades que es internet, tiene la osadía de considerar ese &lt;em&gt;algo&lt;/em&gt; como digno del tiempo de los demás.&lt;/p&gt;
+
+&lt;p&gt;Visto así, el formato blog es bastante insoportable. Es por ello que en las siguientes líneas intentaré defender la utilidad de este sitio web.&lt;/p&gt;
+
+&lt;h2 id=&quot;quin-soy&quot;&gt;Quién soy&lt;/h2&gt;
+
+&lt;p&gt;Mi alias digital es &lt;strong&gt;idiaz.roncero&lt;/strong&gt;. Hay poco truco: en el palabro se incluyen mi nombre y apellidos. No es muy difícil de descifrar si me conoces o investigas mi currículum.&lt;/p&gt;
+
+&lt;p&gt;Trabajo como diseñador y desarrollador web en &lt;a href=&quot;http://www.elestadomental.com&quot; target=&quot;_blank&quot;&gt;El Estado Mental&lt;/a&gt;, probablemente la revista cultural más arriesgada e innovadora de España. En EEM lo soy todo: desde administrador de sistemas hasta diseñador de la revista en formato App. Nunca en mi vida he aprendido tanto en tan poco tiempo.&lt;/p&gt;
+
+&lt;p&gt;En vidas anteriores he realizado las páginas web del OPEMAM, Aish, CITpax o Teim/Reim, entre otros sitios. Sin duda, irán apareciendo en mis entradas del blog.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, no soy desarrollador web. Ni diseñador gráfico. Siempre me interesó este mundo, pero en realidad yo quería ser escritor. Luego quise ser periodista. Luego quise ser periodista internacional. Y luego periodista internacional del mundo árabe e islámico. Tengo los títulos para demostrarlo.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-qu-idiazroncero&quot;&gt;Para qué idiaz.roncero&lt;/h2&gt;
+
+&lt;p&gt;Este blog intentará, en parte, &lt;strong&gt;hacer útiles las técnicas y trucos que he ido aprendiendo en tres años de pelea autodidacta contra los elementos.&lt;/strong&gt; Dichos &lt;em&gt;elementos&lt;/em&gt; son básicamente la masa madre del web: CSS, SASS, HTML5, Javascript y JQuery. Pero no sólo: también sus hijos y parientes cercanos: frameworks como Foundation y Baker, CMS como Drupal 7 y Wordpress, librerías como Compass y Susy. Y también Shopify, Ruby on Rails, Jekyll (en el que se basa este blog), algo de línea de comandos, librerías de todo tipo, tipografías y recursos de lo más variopinto. Me dejo más de la mitad de las cosas. Tiempo al tiempo.&lt;/p&gt;
+
+&lt;p&gt;Si me preguntaran qué es lo que puedo aportar a un mundo ya saturado de recursos y tutoriales, lo resumiría en tres puntos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Soy autodidacta.&lt;/strong&gt; 
+Para muchos, especialmente para los que provienen de la formación reglada en informática, esto será como un enorme cartel de ¡PELIGRO!.&lt;/p&gt;
+
+    &lt;p&gt;Sin embargo, creo que ello me ha dado una mejor perspectiva acerca de cuáles son las trampas y las dificultades que esperan a la persona que inocentemente se acerca al diseño y desarrollo web. Sé dónde están los cuellos de botella, en qué puntos se estanca el aprendizaje y cómo salir de ello.&lt;/p&gt;
+
+    &lt;p&gt;Y lo sé desde el punto de vista del que lo ha sufrido.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Escribo en castellano.&lt;/strong&gt; Después de años de actividad periodística y literaria, no creo hacerlo mal.&lt;/p&gt;
+
+    &lt;p&gt;¿Por qué debería ser esto un valor en sí? Desgraciadamente, el mundo excesivamente &lt;em&gt;geek&lt;/em&gt; de la web está muy escorado hacia lo masculino, angloparlante y técnico-obtuso. Esto es quizá menos cierto en la parte del diseño, marketing y UX&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, pero se hace especialmente evidente en el desarrollo web y la administración de sistemas.&lt;/p&gt;
+
+    &lt;p&gt;Poco puedo hacer contra el primer punto (prometo no tratar el código como un símbolo de poder y estatus). Sin embargo, lucharé contra los otros dos puntos.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Muy poca gente cubre la enorme distancia que hay entre los tutoriales de &lt;a href=&quot;http://www.codecademy.com&quot; target=&quot;_blank&quot;&gt;Codecademy&lt;/a&gt; y las respuestas de &lt;a href=&quot;http://www.stackoverflow.com&quot; target=&quot;_blank&quot;&gt;StackOverflow&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Y es en este desierto en el que el aspirante a programador/diseñador se pierde, se agosta y muere de inanición&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Si poca gente cubre este amplio campo en inglés, huelga decir que aún menos gente lo hace en castellano.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Soy un forastero.&lt;/strong&gt; Como bien reflexionan (y se cachondean) en series como Silicon Valley, el mundo &lt;em&gt;geek&lt;/em&gt; puede llegar a ser profundamente autorreferencial.&lt;/p&gt;
+
+    &lt;p&gt;En este mundo, yo soy un alien. No conozco chistes de desarrolladores versus diseñadores versus sysadmins. No estudié informática. Mis amigos son principalmente sociólogos, polítólogos y periodistas. Mi perfil es muy vaporoso: aunque prefiero el diseño web, he aprendido también desarrollo y administración de sistemas. Simplemente voy aprendiendo lo que necesito para ser capaz de hacer mejor mi trabajo. Creo que ello me hace ser más torpe y lento, pero también capaz de aportar una mirada diferente sobre internet y la web.&lt;/p&gt;
+
+    &lt;p&gt;Especialmente, creo que mi posición excéntrica me hace especialmente consciente de la tecnofilia que es una clara deformación profesional del mundo informático. Una tecnofilia desde la que muchas veces se lanzan reflexiones un tanto peligrosas sobre la cultura o la sociedad. En este sentido, y (creo) afortunadamente para el debate, temas como las licencias Open Source, Creative Commons y el procomún no son deidades intocables en este blog.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;no-todo-es-web&quot;&gt;No todo es web&lt;/h2&gt;
+
+&lt;p&gt;El hecho de que ahora mismo sólo me sienta útil hablando de diseño web no quiere decir que vaya a dejar de lado las otras piezas de mi currículum.&lt;/p&gt;
+
+&lt;p&gt;Como dice la descripción de este blog, estamos ante un sitio &lt;em&gt;absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.&lt;/em&gt; No me miren raro. Me fascina la política iraní. Tengo hasta un trabajo publicado por la Universidad Autónoma de Madrid.&lt;/p&gt;
+
+&lt;p&gt;Relaciones internacionales, literatura, música, política nacional y otras variedades tendrán su sitio si así me apetece. No en vano, este es un blog personal y, como tal, tiene alma de &lt;em&gt;currículum vitae&lt;/em&gt; en perpetua construcción.&lt;/p&gt;
+
+&lt;p&gt;Si el resultado es esquizoide, si venían a buscar buenas librerías jQuery y acaban enredados en una diatriba sobre el estrecho de Ormuz, culpen a la crisis.&lt;/p&gt;
+
+&lt;p&gt;Al fin y al cabo, yo quería ser escritor y periodista.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;em&gt;UX design&lt;/em&gt; o símplemente &lt;em&gt;UX&lt;/em&gt; es la abreviatura que se da al diseño de la “experiencia de usuario”. Un diseñador &lt;em&gt;UX&lt;/em&gt; se preocupa, entre otras cosas, de que no desesperes buscando el botón de Aplicar o la sección de contacto. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Seamos justos. Existen recursos excelentes que cubren el amplio campo del que hablo. &lt;a href=&quot;http://www.alistapart.com&quot; target=&quot;_blank&quot;&gt;A List Apart&lt;/a&gt; y &lt;a href=&quot;http://www.smashingmagazine.com&quot; target=&quot;_blank&quot;&gt;Smashing Magazine&lt;/a&gt; son, sin duda, mis favoritos. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 24 Jun 2015 02:00:00 +0200</pubDate>
+        <link>http://yourdomain.com/autobombo/2015/06/24/unas-palabras-sobre-este-blog.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/autobombo/2015/06/24/unas-palabras-sobre-este-blog.html</guid>
+        
+        
+        <category>autobombo</category>
+        
+      </item>
+    
+  </channel>
+</rss>
