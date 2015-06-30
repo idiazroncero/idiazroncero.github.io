@@ -1898,3 +1898,35 @@ footer:after {
   line-height: 1.5rem;
   color: #666;
 }
+
+/* line 15, ../../_compass/modules/_content.scss */
+.aviso {
+  font-style: italic;
+}
+/* line 17, ../../_compass/modules/_content.scss */
+.aviso i {
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  color: #999;
+}
+/* line 20, ../../_compass/modules/_content.scss */
+.aviso i:first-child {
+  margin-right: 50px;
+}
+/* line 23, ../../_compass/modules/_content.scss */
+.aviso i:last-child {
+  margin-left: 50px;
+  /* Capability transforms2d is prefixed with -moz because 0.77252% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transform: rotate(180deg);
+  /* Capability transforms2d is prefixed with -ms because 2.6001% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -ms context. */
+  -ms-transform: rotate(180deg);
+  /* Capability transforms2d is not prefixed with -o because 0.08196% of users are affected which is less than the threshold of 0.1. */
+  /* Capability transforms2d is prefixed with -webkit because 52.08628% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
