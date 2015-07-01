@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cómo se hizo el título de este blog: siglas y acrónimos animados usando puro CSS3</title>
+  <meta name="description" content="El encabezado de este blog fue un pequeño reto personal que me propuse realizar usando sólo CSS3. Es una idea muy vistosa y que puede quedar especialmente bi...">
+  <link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://yourdomain.com/dise%C3%B1o%20web/2015/07/01/como-se-hizo-el-titulo-de-este-blog.html">
+  <link rel="alternate" type="application/rss+xml" title="idiazroncero" href="http://yourdomain.com/feed.xml" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  
+
+    ga('create', 'UA-64546020-1', 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview'); 
+
+  </script>
+</head>
+
+
+  <body>
+    <div class="container">
+
+      <header class="header">
+	<div class="social-bar">
+		<div class="social-motto">
+			<p>idiazroncero.com | <span id="social-log">versión 0.3</span></p>
+			<div class="social-motto-log">
+				<p>¡estamos en beta!</p>
+				<p>Últimos cambios:</p>
+				<ul>
+					<li>Mensaje "en construcción"</li>
+					<li>Añadidos dos posts</li>
+					<li>Añadidas tags</li>
+					<li>Syntax Highlighting</li>
+				</ul>
+			</div>
+		</div>
+		
+			<a href="https://github.com/idiazroncero" class="fa fa-github" target="_blank"></a><!--
+		
+		
+			--><a href="https://twitter.com/idiazroncero" class="fa fa-twitter" target="_blank"></a><!--
+		
+		
+		Truco para evitar el problema con inline-block-->
+	</div>
+	<div class="idr" >
+		<h1>
+			<a href="/">
+				<span class="idr-i">i</span><span class="idr-id">
+				d</span><span class="idr-idi">i</span><span class="idr-idia">
+				a</span><span class="idr-idiaz">
+				z</span><span class="idr-idiaz_">
+				.</span><span class="idr-idiaz_r">
+				r</span><span class="idr-idiaz_ro">
+				o</span><span class="idr-idiaz_ron">
+				n</span><span class="idr-idiaz_ronc">
+				c</span><span class="idr-idiaz_ronce">
+				e</span><span class="idr-idiaz_roncer">
+				r</span><span class="idr-idiaz_roncero">
+				o</span>
+			</a>
+		</h1>
+	<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
+</div>
+<!-- <nav class="site-nav">
+	<a href="#" class="menu-icon">
+	</a>
+	<div class="trigger">
+		
+			
+				<a class="page-link" href="/about/">About</a>
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="secciones">
+		
+			<p>autobombo</p>
+		
+			<p>apps</p>
+		
+			<p>diseño web</p>
+		
+	</div>
+</nav> -->
+</header>
+      <div class="idr-separador"><hr/><span>{</span></div>
+      <div class="content">
+        <div class="content-wrapper">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Cómo se hizo el título de este blog: siglas y acrónimos animados usando puro CSS3</h1>
+    <p class="post-meta">Jul 1, 2015
+	 • diseño web
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>El encabezado de este blog fue un pequeño reto personal que me propuse realizar usando sólo CSS3. Es una idea muy vistosa y que <strong>puede quedar especialmente bien con acrónimos y siglas</strong>, definiendo dos estados del título - “contraído” y “expandido” - que son activados al pasar el ratón por encima del título.</p>
+
+<p>Además, al utilizar puro CSS3 y no depender de modificaciones en el DOM<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, esta técnica degrada grácilmente en lectores para invidentes o en ausencia de Javascript.</p>
+
+<p>Otra ventaja de usar sólo CSS3 es que no interfiere en absoluto con el SEO o las metatags de redes sociales (open graph, twitter cards), las cuales leen sin problemas el título en su formato “expandido”;</p>
+
+<p>Este tutorial muestra cómo lograr la versión más básica del efecto, que es la siguiente (pasa el ratón sobre <em>“UN”</em> para verlo en acción):</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="qdxBJW" data-default-tab="result" data-user="idiazroncero" class="codepen">See the Pen <a href="http://codepen.io/idiazroncero/pen/qdxBJW/">Título animado en :hover</a> by Ignacio Díaz-Roncero Fraile (<a href="http://codepen.io/idiazroncero">@idiazroncero</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="trocea-el-ttulo">1.- Trocea el título</h2>
+
+<p>Para lograr la animación por separado de cada letra necesitamos declarar un <code>&lt;span&gt;</code> por cada letra del título. Además, con el objetivo de poder tratar independientemente los atributos de cada letra, le daremos a cada <code>span</code> una clase diferente.</p>
+
+<p>Los puristas del <a href="https://en.bem.info/method/">BEM</a> y <a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss">OOCSS</a> me matarán al ver esto, pero mi estrategia para poder saber exactamente qué clase pertenece a cada letra es asignar a cada una un nombre igual a lo que llevamos del título hasta su posicion. Es decir, mientras que la primera <em>n</em> de <em>United Nations</em> toma la clase <code>.un</code>, la segunda es <code>.united-n</code> y la última <code>.united-nation</code>.</p>
+
+<p>Cada cual puede tomar aquí la estrategia de nomenclatura que mas le plazca.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno"> 1</span> <span class="nt">&lt;h1&gt;</span>
+<span class="lineno"> 2</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;u&quot;</span><span class="nt">&gt;</span>U<span class="nt">&lt;/span&gt;</span>
+<span class="lineno"> 3</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;un&quot;</span><span class="nt">&gt;</span>n<span class="nt">&lt;/span&gt;</span>
+<span class="lineno"> 4</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;uni&quot;</span><span class="nt">&gt;</span>i<span class="nt">&lt;/span&gt;</span>
+<span class="lineno"> 5</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;unit&quot;</span><span class="nt">&gt;</span>t<span class="nt">&lt;/span&gt;</span>
+<span class="lineno"> 6</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;unite&quot;</span><span class="nt">&gt;</span>e<span class="nt">&lt;/span&gt;</span>
+<span class="lineno"> 7</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united&quot;</span><span class="nt">&gt;</span>d<span class="nt">&lt;/span&gt;</span>
+<span class="lineno"> 8</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/span&gt;</span>
+<span class="lineno"> 9</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-n&quot;</span><span class="nt">&gt;</span>N<span class="nt">&lt;/span&gt;</span>
+<span class="lineno">10</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-na&quot;</span><span class="nt">&gt;</span>a<span class="nt">&lt;/span&gt;</span>
+<span class="lineno">11</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nat&quot;</span><span class="nt">&gt;</span>t<span class="nt">&lt;/span&gt;</span>
+<span class="lineno">12</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nati&quot;</span><span class="nt">&gt;</span>i<span class="nt">&lt;/span&gt;</span>
+<span class="lineno">13</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-natio&quot;</span><span class="nt">&gt;</span>o<span class="nt">&lt;/span&gt;</span>
+<span class="lineno">14</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nation&quot;</span><span class="nt">&gt;</span>n<span class="nt">&lt;/span&gt;</span>
+<span class="lineno">15</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nations&quot;</span><span class="nt">&gt;</span>s<span class="nt">&lt;/span&gt;</span>
+<span class="lineno">16</span> <span class="nt">&lt;/h1&gt;</span></code></pre></div>
+
+<p>Puesto que, como veremos más adelante, el 99% de la técnica consiste en <strong>animar la propiedad <code>max-height</code></strong>, necesitamos que cada <code>span</code> se comporte como un elemento de tipo block<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Sin embargo, declarar un simple <code>display:block</code> provocará que cada letra tome una línea diferente, rompiendo el título.</p>
+
+<p>Una opción es flotar a la izquierda cada <code>span</code>, pero esto nos impedirá aplicarle a <code>h1</code> el <code>text-align:center</code> que hace que, al expandirse, el texto crezca de manera automática <strong>desde el centro hacia los extremos</strong>.</p>
+
+<p>Es por ello que sólo nos queda usar <code>display: inline-block</code>. Y aquí nos vamos a encontrar con el primer problema.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nt">h1</span> <span class="nt">span</span> <span class="p">{</span>
+<span class="lineno">2</span>   <span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+<span class="lineno">3</span> <span class="p">}</span></code></pre></div>
+
+<p>Bienvenidos a uno de los problemas más <del>coñazo</del> pesados que conozco en HTML. No voy a explicarlo entero, puesto que hay un <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">post excelente en CSS-tricks</a>. El resultado de usar <code>inline block</code> sobre un HTML escrito <em>para humanos</em> (es decir, separando cada <code>span</code> con un salto de línea) es que aparece un indeseable espacio entre letras:</p>
+
+<p><img src="/images/inline-block.png" alt="Un efecto indeseado" /></p>
+
+<p>En el <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">enlace anteriormente citado</a> tenéis varias técnicas para resolverlo. Yo suelo, o bien agolparlo todo y hacerlo ilegible:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;h1&gt;</span>
+<span class="lineno">2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;u&quot;</span><span class="nt">&gt;</span>U<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;un&quot;</span><span class="nt">&gt;</span>n<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;uni&quot;</span><span class="nt">&gt;</span>i<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;unit&quot;</span><span class="nt">&gt;</span>t<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;unite&quot;</span><span class="nt">&gt;</span>e<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united&quot;</span><span class="nt">&gt;</span>d<span class="nt">&lt;/span&gt;</span>...</code></pre></div>
+
+<p>O bien aplico el truco descrito en CSS-Tricks por el cual se “engaña” al HTML poniendo las tags de apertura y cierre de cada <code>span</code> en líneas diferentes:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno"> 1</span> <span class="nt">&lt;h1&gt;</span>
+<span class="lineno"> 2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;u&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 3</span>   U<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;un&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 4</span>   n<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;uni&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 5</span>   i<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;unit&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>   t<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;unite&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 7</span>   e<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 8</span>   d<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 9</span>   <span class="ni">&amp;nbsp;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-n&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">10</span>   N<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-na&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">11</span>   a<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nat&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">12</span>   ...</code></pre></div>
+
+<p>Esto debería volver el título a la normalidad y nos debería servir para pasar a la siguiente fase:</p>
+
+<h2 id="centrar-y-esconder-lo-que-sobra">2.- Centrar y esconder lo que sobra.</h2>
+
+<p>No es estrictamente obligatorio, pero el efecto gana enteros si se hace desde el centro hacia ambos extremos. Esto se consigue simplemente centrando el texto. Como decía antes, es por esto que no podíamos usar <code>float:left</code> para solucionar el problema del inline-block.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
+  <span class="k">text-align</span><span class="o">:</span><span class="k">center</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Es el momento de aderezar nuestra tipografía. Quizá quieras poner todo en <code>uppercase</code>, modificar la <code>font-family</code> o usar algún efecto de <code>text-shadow</code>. Es posible que los efectos más agresivos provoquen algún problema, especialmente si aumentan el tamaño que ocupa cada letra (sombras, fondos y bordes incluídos). Como siempre, se impone el ensayo y error y cierta mesura.</p>
+
+<p>Una vez tengamos nuestro título, es el momento de ocultar las letras que <strong>no forman parte del título en versión corta</strong>.</p>
+
+<p>Necesitamos que las propiedades CSS que vamos a modificar sean animables usando <code>transition</code>. Es por ello que debemos prescindir de dos sospechosos habituales: <code>display:none</code> y <code>visibility:hidden</code>. En su lugar, vamos a utilizar el ancho y la opacidad de cada letra:</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno"> 1</span> <span class="nc">.un</span><span class="o">,</span> 
+<span class="lineno"> 2</span> <span class="nc">.uni</span><span class="o">,</span> 
+<span class="lineno"> 3</span> <span class="nc">.unit</span><span class="o">,</span> 
+<span class="lineno"> 4</span> <span class="nc">.unite</span><span class="o">,</span>
+<span class="lineno"> 5</span> <span class="nc">.united</span><span class="o">,</span>
+<span class="lineno"> 6</span> <span class="nc">.united-</span><span class="o">,</span>
+<span class="lineno"> 7</span> <span class="nc">.united-na</span><span class="o">,</span>
+<span class="lineno"> 8</span> <span class="nc">.united-nat</span><span class="o">,</span>
+<span class="lineno"> 9</span> <span class="nc">.united-nati</span><span class="o">,</span>
+<span class="lineno">10</span> <span class="nc">.united-natio</span><span class="o">,</span>
+<span class="lineno">11</span> <span class="nc">.united-nation</span><span class="o">,</span>
+<span class="lineno">12</span> <span class="nc">.united-nations</span> <span class="p">{</span>
+<span class="lineno">13</span>   <span class="k">max-width</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
+<span class="lineno">14</span>   <span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
+<span class="lineno">15</span> <span class="p">}</span></code></pre></div>
+
+<p>Aquí es donde alguien me dirá, con razón, que se podría simplificar esto añadiendo una clase del tipo <code>.oculto</code> a cada letra. Cierto es. A mí, personalmente, me gusta añadir este extra de trabajo a cambio de poder añadir y quitar letras del efecto directamente desde el CSS.</p>
+
+<p>Hecho esto, ya tenemos un título reducido a su acrónimo, y sólo queda animar la aparición de las letras.</p>
+
+<h2 id="animar-onhover">3.- Animar on:hover</h2>
+
+<p>El truco conoce en saber que <code>height</code> y <code>width</code> tienen muchos problemas para ser animados usando transiciones de CSS3. Sólo funcionan si conoces los valores de salida y llegada (por ejemplo, si animas de un ancho de <code>10px</code> a uno de <code>30px</code>).</p>
+
+<p>En nuestro caso no sabemos los valores de ancho de cada letra, puesto que esto depende de la tipografía<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>. Podríamos calcularlo usando una regla en pantalla, Photoshop o un inspector tipo Firebug, pero sería estúpido ya que si cambiamos de tamaño o de tipografía tendremos que rehacer todo el trabajo.</p>
+
+<p>La solución consiste en <strong>animar el <code>max-height</code></strong>. Como hemos visto, un valor de <code>0</code> oculta totalmente la letra. Sin embargo, un valor de <code>999px</code> <strong>no convierte cada letra en un monstruo de mil píxeles de ancho</strong> ya que este tamaño sólo indica <em>el techo máximo que no se puede sobrepasar</em>. No hace falta decir que 999px es un valor aleatorio, y que nos servirá cualquier cifra imposible de ser sobrepasada.</p>
+
+<p>Dicho esto, toda la magia de este efecto reside en dos líneas de CSS.</p>
+
+<p>La primera declara una transición sobre todos los valores de los <code>span</code>.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nt">h1</span> <span class="nt">span</span> <span class="p">{</span>
+<span class="lineno">2</span>   <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">2s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
+<span class="lineno">3</span> <span class="p">}</span></code></pre></div>
+
+<p>La segunda actúa sobre <code>h1:hover</code> y aplica a todas las letras los nuevos valores de opacidad y max-height que serán animados. No hay que preocuparse por las letras ya visibles, ya que no tienen propiedades CSS declaradas para <code>opacity</code> y <code>max-height</code> y <code>transition</code> sólo opera cuando existen valores de llegada y de partida.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nt">h1</span><span class="nd">:hover</span> <span class="nt">span</span> <span class="p">{</span>
+<span class="lineno">2</span>   <span class="k">max-width</span><span class="o">:</span> <span class="m">999px</span><span class="p">;</span>
+<span class="lineno">3</span>   <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="lineno">4</span> <span class="p">}</span></code></pre></div>
+
+<p>Sin embargo, el efecto no resulta muy atractivo. La transición realiza en 2 segundos el cálculo de todos los valores a la vez, por lo que el resultado es un texto en el que todas las letras restantes se <em>estiran</em> y <em>encienden</em> simultáneamente (ver ejemplo):</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="WvMvoe" data-default-tab="result" data-user="idiazroncero" class="codepen">See the Pen <a href="http://codepen.io/idiazroncero/pen/WvMvoe/">Título animado en :hover sin delay</a> by Ignacio Díaz-Roncero Fraile (<a href="http://codepen.io/idiazroncero">@idiazroncero</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>No está mal del todo pero no hemos estado poniendo clases CSS letra por letra para ésto.</p>
+
+<h2 id="el-toque-final">4.- El toque final</h2>
+
+<p>Lo que falta es <strong>hacer que las letras vayan saliendo en orden (o desorden)</strong>, y para esto nos apoyamos en la propiedad <code>transition-delay</code> que, como su nombre indica, añade un retraso en el inicio de la ejecución de la transición.</p>
+
+<p>De paso, sirve para justificar el por qué de dar a cada <code>span</code> una clase diferente.</p>
+
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno"> 1</span> <span class="nc">.un</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.16s</span><span class="p">}</span>
+<span class="lineno"> 2</span> <span class="nc">.uni</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.32s</span><span class="p">}</span>
+<span class="lineno"> 3</span> <span class="nc">.unit</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.48s</span><span class="p">}</span>
+<span class="lineno"> 4</span> <span class="nc">.unite</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.64s</span><span class="p">}</span>
+<span class="lineno"> 5</span> <span class="nc">.united</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.8s</span><span class="p">}</span>
+<span class="lineno"> 6</span> <span class="nc">.united-</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.96s</span><span class="p">}</span>
+<span class="lineno"> 7</span> <span class="nc">.united-na</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.12s</span><span class="p">}</span>
+<span class="lineno"> 8</span> <span class="nc">.united-nat</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.28s</span><span class="p">}</span>
+<span class="lineno"> 9</span> <span class="nc">.united-nati</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.44s</span><span class="p">}</span>
+<span class="lineno">10</span> <span class="nc">.united-natio</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.6s</span><span class="p">}</span>
+<span class="lineno">11</span> <span class="nc">.united-nation</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.76s</span><span class="p">}</span>
+<span class="lineno">12</span> <span class="nc">.united-nations</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.92s</span><span class="p">}</span></code></pre></div>
+
+<p>Voilà!</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="qdxBJW" data-default-tab="result" data-user="idiazroncero" class="codepen">See the Pen <a href="http://codepen.io/idiazroncero/pen/qdxBJW/">Título animado en :hover</a> by Ignacio Díaz-Roncero Fraile (<a href="http://codepen.io/idiazroncero">@idiazroncero</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Para el título de este blog y para este ejemplo, mi técnica ha sido dividir la duración de la transición (2s) entre el número de letras (12) con el objetivo de que la última transición se dispare más o menos cuando la primera finaliza. Sin embargo, aquí hay un espacio muy amplio para experimentar.</p>
+
+<p>Del mismo modo, en este ejemplo las letras aparecen <strong>en orden</strong>. Sin embargo, en el título de este blog lo hacen <strong>desordenadas</strong>: basta con distribuir aleatoriamente los valores de <code>transition-delay</code>.</p>
+
+<p>También podemos animar otros valores. Por ejemplo, en el título de este blog cada letra tiene un color que es animado hacia el gris al mismo tiempo que <code>max-width</code> y <code>opacity</code>.</p>
+
+<figure>
+	<a href="/images/idr-color.png">
+		<img src="/images/idr-color.png" alt="En idiaz.roncero, cada letra tiene un color de partida que se va convirtiendo en gris" />
+	</a>
+<figcaption>
+    En idiaz.roncero, cada letra tiene un color de partida que se va convirtiendo en gris
+</figcaption>
+</figure>
+
+<p>En definitiva, se trata de una técnica muy sencilla y agradecida que abre todo un abanico de oportunidades y que además nos ha servido para introducir dos cuestiones importantes:</p>
+
+<ul>
+  <li>Cómo animar anchuras desconocidas usando CSS Transitions</li>
+  <li>Cómo solucionar el problema del espacio sobrante entre elementos inline-block.</li>
+</ul>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Para los recién llegados: Document Object Model. Explicación rápida: es el “mapa” de la estructura jerárquica definida en el HTML (los elementos y las relaciones que hay entre ellos), al cual acude Javascript para realizar sus modificaciones (por ejemplo: buscar todos los <code>div</code> hijos de un <code>header</code> con determinada <code>class</code> y eliminarlos).</p>
+
+      <p>Muchas de las animaciones y efectos que se basan en jQuery suelen modificar el DOM añadiendo y eliminando elementos. El problema: un navegador sin javascript o un lector para invidentes no <em>ven</em> estos cambios ya que no forman parte del HTML original. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Esto se debe a que los elementos tipo inline, como <code>span</code>, no aceptan valores definidos de <code>height</code> o <code>width</code>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>A no ser que estemos usando una fuente monospace, claro… <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+      <div class="idr-separador"><hr/><span>}</span></div>
+      <footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-descripcion">
+      <p class="text">Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
+</p>
+    </div>
+
+<!--     <div class="footer-contacto">
+      <ul>
+        <li>idiazroncero</li>
+        <li><a href="mailto:idiaz.roncero@gmail.com">idiaz.roncero@gmail.com</a></li>
+      </ul>
+    </div> -->
+
+		<div class="footer-reconocimientos">
+			<p>Este blog se basa en <a href="http://jekyllrb.com/">Jekyll</a> y usa <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://sass-lang.com/">Sass</a> y <a href="http://compass-style.org/">Compass</a>. Las tipografías son <a href="http://calendasplus.com/">Calendas Plus</a> y <a href="http://fontfabric.com/nexa-free-font/">Nexa</a>.
+		</div>
+
+  </div>
+
+</footer>
+
+
+  </div>
+
+  </body>
+
+</html>

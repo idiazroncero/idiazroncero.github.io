@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Traduciendo la interfaz de Baker Framework</title>
+  <meta name="description" content="Qué es Baker Framework">
+  <link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://yourdomain.com/apps/2015/06/29/traduciendo-la-interfaz-de-baker-framework.html">
+  <link rel="alternate" type="application/rss+xml" title="idiazroncero" href="http://yourdomain.com/feed.xml" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  
+
+    ga('create', 'UA-64546020-1', 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview'); 
+
+  </script>
+</head>
+
+
+  <body>
+    <div class="container">
+
+      <header class="header">
+	<div class="social-bar">
+		<div class="social-motto">
+			<p>idiazroncero.com | <span id="social-log">versión 0.3</span></p>
+			<div class="social-motto-log">
+				<p>¡estamos en beta!</p>
+				<p>Últimos cambios:</p>
+				<ul>
+					<li>Mensaje "en construcción"</li>
+					<li>Añadidos dos posts</li>
+					<li>Añadidas tags</li>
+					<li>Syntax Highlighting</li>
+				</ul>
+			</div>
+		</div>
+		
+			<a href="https://github.com/idiazroncero" class="fa fa-github" target="_blank"></a><!--
+		
+		
+			--><a href="https://twitter.com/idiazroncero" class="fa fa-twitter" target="_blank"></a><!--
+		
+		
+		Truco para evitar el problema con inline-block-->
+	</div>
+	<div class="idr" >
+		<h1>
+			<a href="/">
+				<span class="idr-i">i</span><span class="idr-id">
+				d</span><span class="idr-idi">i</span><span class="idr-idia">
+				a</span><span class="idr-idiaz">
+				z</span><span class="idr-idiaz_">
+				.</span><span class="idr-idiaz_r">
+				r</span><span class="idr-idiaz_ro">
+				o</span><span class="idr-idiaz_ron">
+				n</span><span class="idr-idiaz_ronc">
+				c</span><span class="idr-idiaz_ronce">
+				e</span><span class="idr-idiaz_roncer">
+				r</span><span class="idr-idiaz_roncero">
+				o</span>
+			</a>
+		</h1>
+	<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
+</div>
+<!-- <nav class="site-nav">
+	<a href="#" class="menu-icon">
+	</a>
+	<div class="trigger">
+		
+			
+				<a class="page-link" href="/about/">About</a>
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="secciones">
+		
+			<p>autobombo</p>
+		
+			<p>apps</p>
+		
+			<p>diseño web</p>
+		
+	</div>
+</nav> -->
+</header>
+      <div class="idr-separador"><hr/><span>{</span></div>
+      <div class="content">
+        <div class="content-wrapper">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Traduciendo la interfaz de Baker Framework</h1>
+    <p class="post-meta">Jun 29, 2015
+	 • apps
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="qu-es-baker-framework">Qué es Baker Framework</h2>
+
+<p><a href="http://www.bakerframework.com/">Baker</a> es un excelente entorno de trabajo (framework) dedicado a la publicación de contenidos digitales en iPad y iPhone.</p>
+
+<p>En términos menos abstractos, Baker es una plantilla prediseñada de xCode, el entorno de desarrollo de Apple. Baker viene preparado para que, sin saber ni jota de Swift o Objective-C (los lenguajes con que se programan apps) puedas poner en el App Store desde un simple folleto hasta una extensa librería digital.</p>
+
+<p>Con Baker se han hecho informes, revistas, libros de cuentos, periódicos, experimentos digitales, panfletos…</p>
+
+<p>La mayor fortaleza de Baker, aparte de su gratuidad, es que cada número a publicar es básicamente un micrositio web. Se escribe en HTML, CSS y JS. Entiende de Media Queries, @font-face y CSS3. Si lo ves en tu navegador, lo ves en el iPad.</p>
+
+<p>Es decir, <strong>si sabes cómo hacer páginas web, ya sabes también cómo hacer una revista digital en formato App</strong>. En un mercado en el que las soluciones de publicación digital en formato App no bajan de los 1500$ anuales + 300$ por número publicado, Baker brilla con luz propia.</p>
+
+<h2 id="la-traduccin-de-la-interfaz">La traducción de la interfaz.</h2>
+
+<p>Actualmente estoy usando Baker para un proyecto que posiblemetne verá la luz en otoño de 2015. Como parte de este proyecto, tuve que localizar (traducir) los mensajes de la interfaz por defecto de Baker. Mensajes como <em>“número descargado”</em>, <em>“no disponible”</em> o <em>“suscríbete”</em>.</p>
+
+<p>He contribuido dicho código a la <a href="https://github.com/bakerframework/baker/wiki/Localized-interface#existing-localizations">Wiki de baker</a>, de modo que todo aquel que quiera traducir su App al castellano tenga el trabajo ya realizado.</p>
+
+<p>Podéis verlo también en <a href="https://gist.github.com/idiazroncero/b3b58ee586a2264d2746">este gist</a>:</p>
+
+<script src="https://gist.github.com/idiazroncero/b3b58ee586a2264d2746.js"></script>
+
+<h2 id="cmo-traducir-tu-proyecto">Cómo traducir tu proyecto</h2>
+
+<ol>
+  <li>
+    <p>Abre/crea un proyecto basado en Baker usando xCode<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+  </li>
+  <li>
+    <p>Por defecto, el único idioma activado es el inglés. Para acceder a la información de localizaciones, selecciona primero tu App como proyecto (xCode diferencia entre el “proyecto” y el “target”):</p>
+
+    <p><img src="/images/baker01.jpg" alt="Selecciona &quot;proyecto&quot;" /></p>
+  </li>
+  <li>
+    <p>Cambiará la información que aparece en el centro del editor. En la pestaña “Info”, busca la sección “Localizations” y pulsa el botón +  para añadir el idioma español:</p>
+
+    <p><img src="/images/baker02.jpg" alt="Añade &quot;Spanish&quot;" /></p>
+  </li>
+  <li>
+    <p>Aparecerá un pop-up. Acepta para crear una versión del archivo original (en inglés).</p>
+  </li>
+  <li>
+    <p>Navega, usando la barra lateral, hasta Baker &gt; Supporting Files &gt; Localizable.strings &gt; Localizable.strings (Spanish)</p>
+
+    <p><img src="/images/baker03.jpg" alt="Busca el archivo creado" /></p>
+  </li>
+  <li>
+    <p>Copia y pega el contenido de mi <a href="https://gist.github.com/idiazroncero/b3b58ee586a2264d2746">gist</a>. Modifica lo que consideres oportuno<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Salva el archivo. ¡Listo!</p>
+  </li>
+</ol>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Xcode es gratuito, sólo funciona en Mac y se puede descargar <a href="https://developer.apple.com/xcode/">aquí</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Como dice el comentario en el gist, mi proyecto usa “subscripción” en lugar de “suscripción” debido a que esta es la decisión editorial del proyecto para el que se realizó la traducción. No obstante, la RAE recomienda <a href="http://www.fundeu.es/consulta/suscripcion-1173/">suscripción</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+        </div>
+      </div>
+      <div class="idr-separador"><hr/><span>}</span></div>
+      <footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-descripcion">
+      <p class="text">Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
+</p>
+    </div>
+
+<!--     <div class="footer-contacto">
+      <ul>
+        <li>idiazroncero</li>
+        <li><a href="mailto:idiaz.roncero@gmail.com">idiaz.roncero@gmail.com</a></li>
+      </ul>
+    </div> -->
+
+		<div class="footer-reconocimientos">
+			<p>Este blog se basa en <a href="http://jekyllrb.com/">Jekyll</a> y usa <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://sass-lang.com/">Sass</a> y <a href="http://compass-style.org/">Compass</a>. Las tipografías son <a href="http://calendasplus.com/">Calendas Plus</a> y <a href="http://fontfabric.com/nexa-free-font/">Nexa</a>.
+		</div>
+
+  </div>
+
+</footer>
+
+
+  </div>
+
+  </body>
+
+</html>
