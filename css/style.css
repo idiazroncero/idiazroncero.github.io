@@ -7,22 +7,22 @@ h1 {
 
 @font-face {
   font-family: 'Calendas';
-  src: url('/fonts/calendas_plus-webfont.eot?1433864010');
-  src: url('/fonts/calendas_plus-webfont.eot?iefix&1433864010') format("eot"), url('/fonts/calendas_plus-webfont.woff?1433864010') format("woff"), url('/fonts/calendas_plus-webfont.ttf?1433864010') format("truetype"), url('/fonts/calendas_plus-webfont.eot?1433864010#webfontOkOndcij') format("svg");
+  src: url('/fonts/calendas_plus.eot?1436695796');
+  src: url('/fonts/calendas_plus.eot?iefix&1436695796') format("eot"), url('/fonts/calendas_plus.woff?1436695796') format("woff"), url('/fonts/calendas_plus.ttf?1436695796') format("truetype"), url('/fonts/calendas_plus.eot?1436695796#webfontOkOndcij') format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Calendas';
-  src: url('/fonts/calendas_plus_bold-webfont.eot?1434265542');
-  src: url('/fonts/calendas_plus_bold-webfont.eot?iefix&1434265542') format("eot"), url('/fonts/calendas_plus_bold-webfont.woff?1434265542') format("woff"), url('/fonts/calendas_plus_bold-webfont.ttf?1434265542') format("truetype"), url('/fonts/calendas_plus_bold-webfont.eot?1434265542#webfontOkOndcij') format("svg");
+  src: url('/fonts/calendas_plus_bold.eot?1436695796');
+  src: url('/fonts/calendas_plus_bold.eot?iefix&1436695796') format("eot"), url('/fonts/calendas_plus_bold.woff?1436695796') format("woff"), url('/fonts/calendas_plus_bold.ttf?1436695796') format("truetype"), url('/fonts/calendas_plus_bold.eot?1436695796#webfontOkOndcij') format("svg");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Calendas';
-  src: url('/fonts/calendas_plus_italic-webfont.eot?1434265542');
-  src: url('/fonts/calendas_plus_italic-webfont.eot?iefix&1434265542') format("eot"), url('/fonts/calendas_plus_italic-webfont.woff?1434265542') format("woff"), url('/fonts/calendas_plus_italic-webfont.ttf?1434265542') format("truetype"), url('/fonts/calendas_plus_italic-webfont.eot?1434265542#webfontOkOndcij') format("svg");
+  src: url('/fonts/calendas_plus_italic.eot?1436695796');
+  src: url('/fonts/calendas_plus_italic.eot?iefix&1436695796') format("eot"), url('/fonts/calendas_plus_italic.woff?1436695796') format("woff"), url('/fonts/calendas_plus_italic.ttf?1436695796') format("truetype"), url('/fonts/calendas_plus_italic.eot?1436695796#webfontOkOndcij') format("svg");
   font-weight: normal;
   font-style: italic;
 }
@@ -1473,8 +1473,37 @@ footer:after {
   display: block;
   margin: 0 auto;
 }
+/* line 30, ../../_compass/modules/_content.scss */
+.post-content blockquote {
+  font-size: 18px;
+  font-size: 0.9rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  border-top: 0.75rem solid #d6d6d6;
+  background: #eee;
+}
+/* line 36, ../../_compass/modules/_content.scss */
+.post-content blockquote p:first-child {
+  margin-top: 0;
+}
+/* line 39, ../../_compass/modules/_content.scss */
+.post-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+/* line 43, ../../_compass/modules/_content.scss */
+.post-content .actualizado {
+  font-size: 13px;
+  font-size: 0.65rem;
+  line-height: 23px;
+  line-height: 1.125rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  font-family: Helvetica, Arial, sans-serif;
+}
 
-/* line 32, ../../_compass/modules/_content.scss */
+/* line 51, ../../_compass/modules/_content.scss */
 .footnotes {
   margin-top: 4.5rem;
   border-top: 1px solid #999;
@@ -1485,11 +1514,11 @@ footer:after {
   color: #666;
 }
 
-/* line 39, ../../_compass/modules/_content.scss */
+/* line 58, ../../_compass/modules/_content.scss */
 .aviso {
   font-style: italic;
 }
-/* line 41, ../../_compass/modules/_content.scss */
+/* line 60, ../../_compass/modules/_content.scss */
 .aviso i {
   font-size: 16px;
   font-size: 0.8rem;
@@ -1497,11 +1526,11 @@ footer:after {
   line-height: 1.5rem;
   color: #999;
 }
-/* line 44, ../../_compass/modules/_content.scss */
+/* line 63, ../../_compass/modules/_content.scss */
 .aviso i:first-child {
   margin-right: 50px;
 }
-/* line 47, ../../_compass/modules/_content.scss */
+/* line 66, ../../_compass/modules/_content.scss */
 .aviso i:last-child {
   margin-left: 50px;
   /* Capability transforms2d is prefixed with -moz because 0.77252% of users need it which is more than the threshold of 0.1%. */
