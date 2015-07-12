@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cómo se hizo el título de este blog: siglas y acrónimos animados usando puro CSS3</title>
+
+  <meta name="description" content="El encabezado de este blog fue un pequeño reto personal que me propuse realizar usando sólo CSS3. Es una idea muy vistosa y que puede quedar especialmente bien con acrónimos y siglas, definiendo dos estados del título - “contraído” y “expandido” - que son activados al pasar el ratón por encima de...">
+  <!-- METATAGS DE FACEBOOK -->
+
+<meta content="idiazroncero" property="og:site_name">
+
+  <meta content="Cómo se hizo el título de este blog: siglas y acrónimos animados usando puro CSS3" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="El encabezado de este blog fue un pequeño reto personal que me propuse realizar usando sólo CSS3. Es una idea muy vistosa y que puede quedar especialmente bien con acrónimos y siglas, definiendo dos estados del título - “contraído” y “expandido” - que son activados al pasar el ratón por encima de..." property="og:description">
+
+
+  <meta content="http://idiazroncero.com/diseno-web/como-se-hizo-el-titulo-de-este-blog/" property="og:url">
+
+
+  <meta content="2015-07-01T02:00:00+02:00" property="article:published_time">
+
+<!--  TODO: Añadir una página de autor
+<meta content="http://idiazroncero.com/about/" property="article:author">
+ -->
+
+  <meta content="http://idiazroncero.com/images/idr-featured.jpg" property="og:image">
+
+
+  
+  <meta content="diseno-web" property="article:section">
+  
+
+
+  
+  <meta content="css3" property="article:tag">
+  
+  <meta content="codepen" property="article:tag">
+  
+  <meta content="animacion" property="article:tag">
+  
+  <meta content="ideas" property="article:tag">
+  
+
+
+<!-- METATAGS DE TWITTER -->
+
+<meta content="@idiazroncero" name="twitter:site">
+
+  <meta content="summary_large_image" name="twitter:card">
+
+
+
+  <meta content="Cómo se hizo el título de este blog: siglas y acrónimos animados usando puro CSS3" name="twitter:title">
+
+
+
+  <meta content="El encabezado de este blog fue un pequeño reto personal que me propuse realizar usando sólo CSS3. Es una idea muy vistosa y que puede quedar especialmente bien con acrónimos y siglas, definiendo dos estados del título - “contraído” y “expandido” - que son activados al pasar el ratón por encima de..." name="twitter:description">
+
+
+
+  <meta content="http://idiazroncero.com/images/idr-featured.jpg" name="twitter:image">
+
+
+  <link rel="icon" 
+      type="image/png" 
+      href="/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://idiazroncero.com/diseno-web/como-se-hizo-el-titulo-de-este-blog/">
+  <link rel="alternate" type="application/rss+xml" title="idiazroncero" href="http://idiazroncero.com/feed.xml" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/prism.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  
+
+    ga('create', 'UA-64546020-1', 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview'); 
+
+  </script>
+</head>
+
+
+  <body>
+    <div class="container">
+
+      <header class="header">
+	<div class="social-bar">
+		<div class="social-motto">
+			<p>idiazroncero.com | <span id="social-log">versión 0.4</span></p>
+			<div class="social-motto-log">
+				<p>¡estamos en beta!</p>
+				<p>Últimos cambios:</p>
+				<ul>
+					<li>Comentarios Disqus</li>
+					<li>Añadido un post</li>
+					<li>Mejorada Syntax Highlighting</li>
+					<li>Corregidos errores en portada</li>
+				</ul>
+			</div>
+		</div>
+		
+			<a href="https://github.com/idiazroncero" class="fa fa-github" target="_blank"></a><!--
+		
+		
+			--><a href="https://twitter.com/idiazroncero" class="fa fa-twitter" target="_blank"></a><!--
+		
+		
+		Truco para evitar el problema con inline-block-->
+	</div>
+	<div class="idr" >
+		<h1>
+			<a href="/">
+				<span class="idr-i">i</span><span class="idr-id">
+				d</span><span class="idr-idi">i</span><span class="idr-idia">
+				a</span><span class="idr-idiaz">
+				z</span><span class="idr-idiaz_">
+				.</span><span class="idr-idiaz_r">
+				r</span><span class="idr-idiaz_ro">
+				o</span><span class="idr-idiaz_ron">
+				n</span><span class="idr-idiaz_ronc">
+				c</span><span class="idr-idiaz_ronce">
+				e</span><span class="idr-idiaz_roncer">
+				r</span><span class="idr-idiaz_roncero">
+				o</span>
+			</a>
+		</h1>
+	<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
+</div>
+<!-- <nav class="site-nav">
+	<a href="#" class="menu-icon">
+	</a>
+	<div class="trigger">
+		
+			
+				<a class="page-link" href="/about/">About</a>
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="secciones">
+		
+			<p>autobombo</p>
+		
+			<p>apps</p>
+		
+			<p>diseno-web</p>
+		
+	</div>
+</nav> -->
+</header>
+      <div class="idr-separador"><hr/><span>{</span></div>
+      <div class="content">
+        <div class="content-wrapper">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Cómo se hizo el título de este blog: siglas y acrónimos animados usando puro CSS3</h1>
+    <p class="post-meta">Jul 1, 2015
+	 
+		• 
+		
+			
+				diseño web
+			
+		
+
+	
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>El encabezado de este blog fue un pequeño reto personal que me propuse realizar usando sólo CSS3. Es una idea muy vistosa y que <strong>puede quedar especialmente bien con acrónimos y siglas</strong>, definiendo dos estados del título - “contraído” y “expandido” - que son activados al pasar el ratón por encima del título.</p>
+
+<p>Además, al utilizar puro CSS3 y no depender de modificaciones en el DOM<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, esta técnica degrada grácilmente en lectores para invidentes o en ausencia de Javascript.</p>
+
+<p>Otra ventaja de usar sólo CSS3 es que no interfiere en absoluto con el SEO o las metatags de redes sociales (open graph, twitter cards), las cuales leen sin problemas el título en su formato “expandido”;</p>
+
+<p>Este tutorial muestra cómo lograr la versión más básica del efecto, que es la siguiente (pasa el ratón sobre <em>“UN”</em> para verlo en acción):</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="qdxBJW" data-default-tab="result" data-user="idiazroncero" class="codepen">See the Pen <a href="http://codepen.io/idiazroncero/pen/qdxBJW/">Título animado en :hover</a> by Ignacio Díaz-Roncero Fraile (<a href="http://codepen.io/idiazroncero">@idiazroncero</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="trocea-el-ttulo">1.- Trocea el título</h2>
+
+<p>Para lograr la animación por separado de cada letra necesitamos declarar un <code>&lt;span&gt;</code> por cada letra del título. Además, con el objetivo de poder tratar independientemente los atributos de cada letra, le daremos a cada <code>span</code> una clase diferente.</p>
+
+<p>Los puristas del <a href="https://en.bem.info/method/">BEM</a> y <a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss">OOCSS</a> me matarán al ver esto, pero mi estrategia para poder saber exactamente qué clase pertenece a cada letra es asignar a cada una un nombre igual a lo que llevamos del título hasta su posicion. Es decir, mientras que la primera <em>n</em> de <em>United Nations</em> toma la clase <code>.un</code>, la segunda es <code>.united-n</code> y la última <code>.united-nation</code>.</p>
+
+<p>Cada cual puede tomar aquí la estrategia de nomenclatura que mas le plazca.</p>
+
+<div>
+  <pre data-line=""><code class="language-markup">&lt;h1&gt;
+    &lt;span class=&quot;u&quot;&gt;U&lt;/span&gt;
+    &lt;span class=&quot;un&quot;&gt;n&lt;/span&gt;
+    &lt;span class=&quot;uni&quot;&gt;i&lt;/span&gt;
+    &lt;span class=&quot;unit&quot;&gt;t&lt;/span&gt;
+    &lt;span class=&quot;unite&quot;&gt;e&lt;/span&gt;
+    &lt;span class=&quot;united&quot;&gt;d&lt;/span&gt;
+    &lt;span class=&quot;united-&quot;&gt;&amp;nbsp;&lt;/span&gt;
+    &lt;span class=&quot;united-n&quot;&gt;N&lt;/span&gt;
+    &lt;span class=&quot;united-na&quot;&gt;a&lt;/span&gt;
+    &lt;span class=&quot;united-nat&quot;&gt;t&lt;/span&gt;
+    &lt;span class=&quot;united-nati&quot;&gt;i&lt;/span&gt;
+    &lt;span class=&quot;united-natio&quot;&gt;o&lt;/span&gt;
+    &lt;span class=&quot;united-nation&quot;&gt;n&lt;/span&gt;
+    &lt;span class=&quot;united-nations&quot;&gt;s&lt;/span&gt;
+&lt;/h1&gt;</code></pre>
+</div>
+
+<p>Puesto que, como veremos más adelante, el 99% de la técnica consiste en <strong>animar la propiedad <code>max-height</code></strong>, necesitamos que cada <code>span</code> se comporte como un elemento de tipo block<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Sin embargo, declarar un simple <code>display:block</code> provocará que cada letra tome una línea diferente, rompiendo el título.</p>
+
+<p>Una opción es flotar a la izquierda cada <code>span</code>, pero esto nos impedirá aplicarle a <code>h1</code> el <code>text-align:center</code> que hace que, al expandirse, el texto crezca de manera automática <strong>desde el centro hacia los extremos</strong>.</p>
+
+<p>Es por ello que sólo nos queda usar <code>display: inline-block</code>. Y aquí nos vamos a encontrar con el primer problema.</p>
+
+<div>
+  <pre data-line=""><code class="language-css">h1 span {
+  display:inline-block;
+}</code></pre>
+</div>
+
+<p>Bienvenidos a uno de los problemas más <del>coñazo</del> pesados que conozco en HTML. No voy a explicarlo entero, puesto que hay un <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">post excelente en CSS-tricks</a>. El resultado de usar <code>inline block</code> sobre un HTML escrito <em>para humanos</em> (es decir, separando cada <code>span</code> con un salto de línea) es que aparece un indeseable espacio entre letras:</p>
+
+<p><img src="/images/inline-block.png" alt="Un efecto indeseado" /></p>
+
+<p>En el <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">enlace anteriormente citado</a> tenéis varias técnicas para resolverlo. Yo suelo, o bien agolparlo todo y hacerlo ilegible:</p>
+
+<div>
+  <pre data-line=""><code class="language-markup">&lt;h1&gt;
+  &lt;span class=&quot;u&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;un&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;uni&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;unit&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;unite&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;united&quot;&gt;d&lt;/span&gt;...</code></pre>
+</div>
+
+<p>O bien aplico el truco descrito en CSS-Tricks por el cual se “engaña” al HTML poniendo las tags de apertura y cierre de cada <code>span</code> en líneas diferentes:</p>
+
+<div>
+  <pre data-line=""><code class="language-markup">&lt;h1&gt;
+  &lt;span class=&quot;u&quot;&gt;
+  U&lt;/span&gt;&lt;span class=&quot;un&quot;&gt;
+  n&lt;/span&gt;&lt;span class=&quot;uni&quot;&gt;
+  i&lt;/span&gt;&lt;span class=&quot;unit&quot;&gt;
+  t&lt;/span&gt;&lt;span class=&quot;unite&quot;&gt;
+  e&lt;/span&gt;&lt;span class=&quot;united&quot;&gt;
+  d&lt;/span&gt;&lt;span class=&quot;united-&quot;&gt;
+  &amp;nbsp;&lt;/span&gt;&lt;span class=&quot;united-n&quot;&gt;
+  N&lt;/span&gt;&lt;span class=&quot;united-na&quot;&gt;
+  a&lt;/span&gt;&lt;span class=&quot;united-nat&quot;&gt;
+  ...</code></pre>
+</div>
+
+<p>Esto debería volver el título a la normalidad y nos debería servir para pasar a la siguiente fase:</p>
+
+<h2 id="centrar-y-esconder-lo-que-sobra">2.- Centrar y esconder lo que sobra.</h2>
+
+<p>No es estrictamente obligatorio, pero el efecto gana enteros si se hace desde el centro hacia ambos extremos. Esto se consigue simplemente centrando el texto. Como decía antes, es por esto que no podíamos usar <code>float:left</code> para solucionar el problema del inline-block.</p>
+
+<div>
+  <pre data-line=""><code class="language-css">h1 {
+  text-align:center;
+}</code></pre>
+</div>
+
+<p>Es el momento de aderezar nuestra tipografía. Quizá quieras poner todo en <code>uppercase</code>, modificar la <code>font-family</code> o usar algún efecto de <code>text-shadow</code>. Es posible que los efectos más agresivos provoquen algún problema, especialmente si aumentan el tamaño que ocupa cada letra (sombras, fondos y bordes incluídos). Como siempre, se impone el ensayo y error y cierta mesura.</p>
+
+<p>Una vez tengamos nuestro título, es el momento de ocultar las letras que <strong>no forman parte del título en versión corta</strong>.</p>
+
+<p>Necesitamos que las propiedades CSS que vamos a modificar sean animables usando <code>transition</code>. Es por ello que debemos prescindir de dos sospechosos habituales: <code>display:none</code> y <code>visibility:hidden</code>. En su lugar, vamos a utilizar el ancho y la opacidad de cada letra:</p>
+
+<div>
+  <pre data-line=""><code class="language-css">.un, 
+.uni, 
+.unit, 
+.unite,
+.united,
+.united-,
+.united-na,
+.united-nat,
+.united-nati,
+.united-natio,
+.united-nation,
+.united-nations {
+  max-width:0;
+  opacity:0;
+}</code></pre>
+</div>
+
+<p>Aquí es donde alguien me dirá, con razón, que se podría simplificar esto añadiendo una clase del tipo <code>.oculto</code> a cada letra. Cierto es. A mí, personalmente, me gusta añadir este extra de trabajo a cambio de poder añadir y quitar letras del efecto directamente desde el CSS.</p>
+
+<p>Hecho esto, ya tenemos un título reducido a su acrónimo, y sólo queda animar la aparición de las letras.</p>
+
+<h2 id="animar-onhover">3.- Animar on:hover</h2>
+
+<p>El truco conoce en saber que <code>height</code> y <code>width</code> tienen muchos problemas para ser animados usando transiciones de CSS3. Sólo funcionan si conoces los valores de salida y llegada (por ejemplo, si animas de un ancho de <code>10px</code> a uno de <code>30px</code>).</p>
+
+<p>En nuestro caso no sabemos los valores de ancho de cada letra, puesto que esto depende de la tipografía<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>. Podríamos calcularlo usando una regla en pantalla, Photoshop o un inspector tipo Firebug, pero sería estúpido ya que si cambiamos de tamaño o de tipografía tendremos que rehacer todo el trabajo.</p>
+
+<p>La solución consiste en <strong>animar el <code>max-height</code></strong>. Como hemos visto, un valor de <code>0</code> oculta totalmente la letra. Sin embargo, un valor de <code>999px</code> <strong>no convierte cada letra en un monstruo de mil píxeles de ancho</strong> ya que este tamaño sólo indica <em>el techo máximo que no se puede sobrepasar</em>. No hace falta decir que 999px es un valor aleatorio, y que nos servirá cualquier cifra imposible de ser sobrepasada.</p>
+
+<p>Dicho esto, toda la magia de este efecto reside en dos líneas de CSS.</p>
+
+<p>La primera declara una transición sobre todos los valores de los <code>span</code>.</p>
+
+<div>
+  <pre data-line=""><code class="language-css">h1 span {
+  transition: all 2s ease-in-out;
+}</code></pre>
+</div>
+
+<p>La segunda actúa sobre <code>h1:hover</code> y aplica a todas las letras los nuevos valores de opacidad y max-height que serán animados. No hay que preocuparse por las letras ya visibles, ya que no tienen propiedades CSS declaradas para <code>opacity</code> y <code>max-height</code> y <code>transition</code> sólo opera cuando existen valores de llegada y de partida.</p>
+
+<div>
+  <pre data-line=""><code class="language-css">h1:hover span {
+  max-width: 999px;
+  opacity: 1;
+}</code></pre>
+</div>
+
+<p>Sin embargo, el efecto no resulta muy atractivo. La transición realiza en 2 segundos el cálculo de todos los valores a la vez, por lo que el resultado es un texto en el que todas las letras restantes se <em>estiran</em> y <em>encienden</em> simultáneamente (ver ejemplo):</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="WvMvoe" data-default-tab="result" data-user="idiazroncero" class="codepen">See the Pen <a href="http://codepen.io/idiazroncero/pen/WvMvoe/">Título animado en :hover sin delay</a> by Ignacio Díaz-Roncero Fraile (<a href="http://codepen.io/idiazroncero">@idiazroncero</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>No está mal del todo pero no hemos estado poniendo clases CSS letra por letra para ésto.</p>
+
+<h2 id="el-toque-final">4.- El toque final</h2>
+
+<p>Lo que falta es <strong>hacer que las letras vayan saliendo en orden (o desorden)</strong>, y para esto nos apoyamos en la propiedad <code>transition-delay</code> que, como su nombre indica, añade un retraso en el inicio de la ejecución de la transición.</p>
+
+<p>De paso, sirve para justificar el por qué de dar a cada <code>span</code> una clase diferente.</p>
+
+<div>
+  <pre data-line=""><code class="language-css">.un { transition-delay: 0.16s}
+.uni { transition-delay: 0.32s}
+.unit { transition-delay: 0.48s}
+.unite { transition-delay: 0.64s}
+.united { transition-delay: 0.8s}
+.united- { transition-delay: 0.96s}
+.united-na { transition-delay: 1.12s}
+.united-nat { transition-delay: 1.28s}
+.united-nati { transition-delay: 1.44s}
+.united-natio { transition-delay: 1.6s}
+.united-nation { transition-delay: 1.76s}
+.united-nations { transition-delay: 1.92s}</code></pre>
+</div>
+
+<p>Voilà!</p>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="qdxBJW" data-default-tab="result" data-user="idiazroncero" class="codepen">See the Pen <a href="http://codepen.io/idiazroncero/pen/qdxBJW/">Título animado en :hover</a> by Ignacio Díaz-Roncero Fraile (<a href="http://codepen.io/idiazroncero">@idiazroncero</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Para el título de este blog y para este ejemplo, mi técnica ha sido dividir la duración de la transición (2s) entre el número de letras (12) con el objetivo de que la última transición se dispare más o menos cuando la primera finaliza. Sin embargo, aquí hay un espacio muy amplio para experimentar.</p>
+
+<p>Del mismo modo, en este ejemplo las letras aparecen <strong>en orden</strong>. Sin embargo, en el título de este blog lo hacen <strong>desordenadas</strong>: basta con distribuir aleatoriamente los valores de <code>transition-delay</code>.</p>
+
+<p>También podemos animar otros valores. Por ejemplo, en el título de este blog cada letra tiene un color que es animado hacia el gris al mismo tiempo que <code>max-width</code> y <code>opacity</code>.</p>
+
+<figure>
+	<a href="/images/idr-color.png">
+		<img src="/images/idr-color.png" alt="En idiaz.roncero, cada letra tiene un color de partida que se va convirtiendo en gris" />
+	</a>
+<figcaption>
+    En idiaz.roncero, cada letra tiene un color de partida que se va convirtiendo en gris
+</figcaption>
+</figure>
+
+<p>En definitiva, se trata de una técnica muy sencilla y agradecida que abre todo un abanico de oportunidades y que además nos ha servido para introducir dos cuestiones importantes:</p>
+
+<ul>
+  <li>Cómo animar anchuras desconocidas usando CSS Transitions</li>
+  <li>Cómo solucionar el problema del espacio sobrante entre elementos inline-block.</li>
+</ul>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Para los recién llegados: Document Object Model. Explicación rápida: es el “mapa” de la estructura jerárquica definida en el HTML (los elementos y las relaciones que hay entre ellos), al cual acude Javascript para realizar sus modificaciones (por ejemplo: buscar todos los <code>div</code> hijos de un <code>header</code> con determinada <code>class</code> y eliminarlos).</p>
+
+      <p>Muchas de las animaciones y efectos que se basan en jQuery suelen modificar el DOM añadiendo y eliminando elementos. El problema: un navegador sin javascript o un lector para invidentes no <em>ven</em> estos cambios ya que no forman parte del HTML original. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Esto se debe a que los elementos tipo inline, como <code>span</code>, no aceptan valores definidos de <code>height</code> o <code>width</code>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>A no ser que estemos usando una fuente monospace, claro… <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'idiazroncero';
+      
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+        </div>
+      </div>
+      <div class="idr-separador"><hr/><span>}</span></div>
+      <footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-descripcion">
+      <p class="text">Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
+</p>
+    </div>
+
+<!--     <div class="footer-contacto">
+      <ul>
+        <li>idiazroncero</li>
+        <li><a href="mailto:idiaz.roncero@gmail.com">idiaz.roncero@gmail.com</a></li>
+      </ul>
+    </div> -->
+
+		<div class="footer-reconocimientos">
+			<p>Este blog se basa en <a href="http://jekyllrb.com/">Jekyll</a> y usa <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://sass-lang.com/">Sass</a> y <a href="http://compass-style.org/">Compass</a>. Las tipografías son <a href="http://calendasplus.com/">Calendas Plus</a> y <a href="http://fontfabric.com/nexa-free-font/">Nexa</a>.
+		</div>
+
+  </div>
+
+</footer>
+
+
+  </div>
+
+  </body>
+
+</html>

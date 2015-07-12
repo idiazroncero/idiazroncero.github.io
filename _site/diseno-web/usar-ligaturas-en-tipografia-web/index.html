@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ligaduras en tipografía web</title>
+
+  <meta name="description" content="A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.">
+  <!-- METATAGS DE FACEBOOK -->
+
+<meta content="idiazroncero" property="og:site_name">
+
+  <meta content="Ligaduras en tipografía web" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas." property="og:description">
+
+
+  <meta content="http://idiazroncero.com/diseno-web/usar-ligaturas-en-tipografia-web/" property="og:url">
+
+
+  <meta content="2015-07-11T02:00:00+02:00" property="article:published_time">
+
+<!--  TODO: Añadir una página de autor
+<meta content="http://idiazroncero.com/about/" property="article:author">
+ -->
+
+  <meta content="http://idiazroncero.com/images/ligatura-muestra.png" property="og:image">
+
+
+  
+  <meta content="diseno-web" property="article:section">
+  
+
+
+  
+  <meta content="tipografia" property="article:tag">
+  
+  <meta content="ligaduras" property="article:tag">
+  
+  <meta content="css" property="article:tag">
+  
+
+
+<!-- METATAGS DE TWITTER -->
+
+<meta content="@idiazroncero" name="twitter:site">
+
+  <meta content="summary_large_image" name="twitter:card">
+
+
+
+  <meta content="Ligaduras en tipografía web" name="twitter:title">
+
+
+
+  <meta content="A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas." name="twitter:description">
+
+
+
+  <meta content="http://idiazroncero.com/images/ligatura-muestra.png" name="twitter:image">
+
+
+  <link rel="icon" 
+      type="image/png" 
+      href="/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://idiazroncero.com/diseno-web/usar-ligaturas-en-tipografia-web/">
+  <link rel="alternate" type="application/rss+xml" title="idiazroncero" href="http://idiazroncero.com/feed.xml" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/prism.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  
+
+    ga('create', 'UA-64546020-1', 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview'); 
+
+  </script>
+</head>
+
+
+  <body>
+    <div class="container">
+
+      <header class="header">
+	<div class="social-bar">
+		<div class="social-motto">
+			<p>idiazroncero.com | <span id="social-log">versión 0.4</span></p>
+			<div class="social-motto-log">
+				<p>¡estamos en beta!</p>
+				<p>Últimos cambios:</p>
+				<ul>
+					<li>Comentarios Disqus</li>
+					<li>Añadido un post</li>
+					<li>Mejorada Syntax Highlighting</li>
+					<li>Corregidos errores en portada</li>
+				</ul>
+			</div>
+		</div>
+		
+			<a href="https://github.com/idiazroncero" class="fa fa-github" target="_blank"></a><!--
+		
+		
+			--><a href="https://twitter.com/idiazroncero" class="fa fa-twitter" target="_blank"></a><!--
+		
+		
+		Truco para evitar el problema con inline-block-->
+	</div>
+	<div class="idr" >
+		<h1>
+			<a href="/">
+				<span class="idr-i">i</span><span class="idr-id">
+				d</span><span class="idr-idi">i</span><span class="idr-idia">
+				a</span><span class="idr-idiaz">
+				z</span><span class="idr-idiaz_">
+				.</span><span class="idr-idiaz_r">
+				r</span><span class="idr-idiaz_ro">
+				o</span><span class="idr-idiaz_ron">
+				n</span><span class="idr-idiaz_ronc">
+				c</span><span class="idr-idiaz_ronce">
+				e</span><span class="idr-idiaz_roncer">
+				r</span><span class="idr-idiaz_roncero">
+				o</span>
+			</a>
+		</h1>
+	<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
+</div>
+<!-- <nav class="site-nav">
+	<a href="#" class="menu-icon">
+	</a>
+	<div class="trigger">
+		
+			
+				<a class="page-link" href="/about/">About</a>
+			
+		
+			
+		
+			
+		
+	</div>
+	<div class="secciones">
+		
+			<p>autobombo</p>
+		
+			<p>apps</p>
+		
+			<p>diseno-web</p>
+		
+	</div>
+</nav> -->
+</header>
+      <div class="idr-separador"><hr/><span>{</span></div>
+      <div class="content">
+        <div class="content-wrapper">
+          <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Ligaduras en tipografía web</h1>
+    <p class="post-meta">Jul 11, 2015
+	 
+		• 
+		
+			
+				diseño web
+			
+		
+
+	
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.</p>
+
+<p>Una ligadura es la unión de dos o más grafemas (letras, símbolos). Generalmente, estos dos grafemas por separado tienden a colisionar: por ejemplo, la unión de la letra efe y la i en ciertas tipografías puede provocar que el punto de la i “choque” con la parte superior de la efe.</p>
+
+<p>Desde hace un tiempo, CSS3 soporta experimentalmente las tipografías con ligaduras.</p>
+
+<p>Sin embargo, para usar ligaduras no basta con escribir las propiedades CSS adecuadas. La fuente que utilicemos debe tener definidos glifos para las ligaduras más comunes.</p>
+
+<p>La fuente tipo serif de esta web, <a href="http://www.calendasplus.com">Calendas Plus</a>, es un ejemplo excelente de tipografía con ligaduras. He aquí una captura de pantalla de varias de sus propuestas:</p>
+
+<p><img src="/images/ligaturas.png" alt="Ligaduras de Calendas Plus" /></p>
+
+<p>Para activar las ligaduras, y dado que estamos ante un código experimental, tenemos que usar dos sintaxis diferentes y el prefijo <code>webkit</code>:</p>
+
+<div>
+  <pre data-line=""><code class="language-css">body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-variant-ligatures: common-ligatures;
+	font-variant-ligatures: common-ligatures;
+}</code></pre>
+</div>
+
+<p><code>text-rendering</code> forma parte de una especificación más amplia, la cual indica al navegador cómo deseamos que se rendericen las fuentes. En este caso, optimizar legibilidad provoca la activación de las ligaduras, entre otros efectos.</p>
+
+<p>Por su parte, ‘font-variant-ligatures’ es una propiedad mucho más específica que, como su nombre indica, activa las ligaduras.</p>
+
+<p>Ambas son actualmente “recomendaciones”, siendo <code>font-variant-ligatures</code> una recomendación <strong>candidata</strong> Esto significa que ambas tienen muchas posibilidades de acabar formando parte de la especificación oficial de CSS, y es por esto que la mayoría de los navegadores modernos las entienden sin problemas.</p>
+
+<p>Además, los navegadores incapaces de renderizar las ligaduras simplemente muestran las letras originales. Es por ello que usar estas propiedades CSS, pese a no ser aún oficiales, es <strong>seguro</strong> a nivel de SEO, accesibilidad y legibilidad.</p>
+
+<h2 id="campo-de-pruebas">Campo de pruebas</h2>
+
+<p>En esta web, un texto susceptible de ser ligado se ve de la siguiente manera:</p>
+
+<p style="font-size:3rem; text-align:center; line-height:3rem">fi, fl, ffi, ffl</p>
+
+<p>Sin activar las ligaduras en el CSS, se vería así:</p>
+
+<p style="font-size:3rem; text-align:center; line-height:3rem; text-rendering: optimizeSpeed;
+	-webkit-font-variant-ligatures: no-common-ligatures;
+	font-variant-ligatures: no-common-ligatures;">fi, fl, ffi, ffl</p>
+
+<p>Las ligaduras que se activan automáticamente, no obstante, son <strong>muy pocas</strong> respecto al total de ligaduras que una fuente como Calendas Plus tiene.</p>
+
+<p>Para usar las ligaduras que no aparecen automáticamente, podemos inspeccionar la fuente usando herramientas como el catálogo tipográfico de Mac para obtener al código Unicode de cada grafema. También podemos consultar directamente las ligaduras más comunes en <a href="http://adamdscott.com/ligatures-on-the-web/">artículos como éste</a>.</p>
+
+<p>Una vez tenemos el codigo, en sitios como <a href="http://unicode-table.com/es/">Unicode Table</a> podemos obtener la entidad html adecuada.</p>
+
+<p>Por ejemplo, en Calendas Plus la ligatura <strong>Œ</strong> - que no se activa al escribir “OE” - corresponde al carácter Unicode <code>U+0152</code>. Según <a href="http://unicode-table.com/es/0152/">Unicode Table</a>, su entidad HTML es <code>&amp;#338;</code> o <code>&amp;OElig;</code>. Escribimos:</p>
+
+<div>
+  <pre data-line=""><code class="language-html">&lt;p&gt;&amp;#338;&lt;/p&gt;</code></pre>
+</div>
+
+<p>Y obtenemos:</p>
+
+<p style="font-size:3rem; text-align:center;">&OElig;</p>
+
+<h2 id="un-mundo-imperfecto">Un mundo imperfecto</h2>
+
+<p>No soy para nada un experto en tipografía web, pero lo poco que sé me sirve para saber que es un mundo complejo y un poco caótico.</p>
+
+<p>Existen multipicidad de formatos de fuente, como todo el que se haya enfrentado a un <code>@font-face</code> sabe.</p>
+
+<p>El correcto funcionamiento de las ligaduras y la capacidad de usar entidades html dependerá, en última instancia, del esfuerzo que hayan hecho los autores de la fuente en preparar sus fuentes para la web y/o de lo correctamente que haya hecho su trabajo el conversor de fuentes.</p>
+
+<p>En mi caso, Calendas Plus es una excelente fuente enfocada al medio escrito que <em>no</em> viene preparada para un <code>@font-face</code>. Se descarga sólo en formato <code>*.otf</code>, y hay que realizar la conversión manualmente.</p>
+
+<p>Para usarla en esta web, la pasé por el conocido <a href="http://www.fontsquirrel.com/tools/webfont-generator">Webfont Kit Generator de FontSquirrell</a>. En algún punto, desconozco por qué, ligaduras como la que une la ese con la te dejaron de funcionar, pese a ser ligaduras “oficiales” con su entidad HTML bien asentada y su UNICODE asignado. Si la uso, aparece lo siguiente:</p>
+
+<p style="font-size:3rem; text-align:center;">ﬆ</p>
+
+<p>En lugar de:</p>
+
+<p><img src="/images/ligaturast.png" alt="Ligatura ST original" /></p>
+
+<p>Lo cual nos lleva a otra pequeña frustración: Calendas Plus viene con una tonelada de ligaduras increíbles que muestran en su <a href="http://www.calendasplus.com">página web</a>:</p>
+
+<p><img src="/images/ligatura-muestra.png" alt="Muestra de Ligaduras en Calendas Plus" /></p>
+
+<p>Sin embargo, la mayoría de ellas son ligaduras <em>propias</em> de la fuente, accesibles a través de un inspector de glifos como los de Word o Adobe pero <strong>inexistentes en el estándar internacional UNICODE y, por tanto, <em>totalmente</em> inútiles en la web</strong> (desde el punto de vista de la tipografía, claro).</p>
+
+<p>Una pena, porque estamos hablando de ligaduras tan geniales como las siguientes:</p>
+
+<p><img src="/images/ligatures-weirdo.png" alt="Ligaduras raras" /></p>
+
+<p>En definitiva, merece <em>mucho</em> la pena optar por fuentes que incluyen ligaduras, ya que en tamaños pequeños aumentan la legibilidad y en grandes resultan de gran belleza.</p>
+
+<p>Sin embargo, todavía queda mucho camino por recorrer para poder explotar todo el potencial creativo de las ligaduras en la tipografía web. En comparación con su uso en diseño gráfico (inDesign, Photoshop), nos encontramos con dos grandes limitaciones:</p>
+
+<ul>
+  <li>
+    <p>La necesidad de que los autores de la fuente acomentan el enorme trabajo de adaptar todos los formatos a la web</p>
+  </li>
+  <li>
+    <p>Las limitaciones del UNICODE: la necesidad de trabajar con un elenco predeterminado de opciones y la imposibilidad técnica de acceder a todas las posibilidades que los autores de la tipografía hayan preparado.</p>
+  </li>
+</ul>
+
+
+  </article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'idiazroncero';
+      
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+        </div>
+      </div>
+      <div class="idr-separador"><hr/><span>}</span></div>
+      <footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-descripcion">
+      <p class="text">Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
+</p>
+    </div>
+
+<!--     <div class="footer-contacto">
+      <ul>
+        <li>idiazroncero</li>
+        <li><a href="mailto:idiaz.roncero@gmail.com">idiaz.roncero@gmail.com</a></li>
+      </ul>
+    </div> -->
+
+		<div class="footer-reconocimientos">
+			<p>Este blog se basa en <a href="http://jekyllrb.com/">Jekyll</a> y usa <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://sass-lang.com/">Sass</a> y <a href="http://compass-style.org/">Compass</a>. Las tipografías son <a href="http://calendasplus.com/">Calendas Plus</a> y <a href="http://fontfabric.com/nexa-free-font/">Nexa</a>.
+		</div>
+
+  </div>
+
+</footer>
+
+
+  </div>
+
+  </body>
+
+</html>

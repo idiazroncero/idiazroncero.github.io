@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>idiazroncero</title>
+    <description>Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
+</description>
+    <link>http://idiazroncero.com/</link>
+    <atom:link href="http://idiazroncero.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 12 Jul 2015 13:35:45 +0200</pubDate>
+    <lastBuildDate>Sun, 12 Jul 2015 13:35:45 +0200</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Ligaduras en tipografía web</title>
+        <description>&lt;p&gt;A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.&lt;/p&gt;
+
+&lt;p&gt;Una ligadura es la unión de dos o más grafemas (letras, símbolos). Generalmente, estos dos grafemas por separado tienden a colisionar: por ejemplo, la unión de la letra efe y la i en ciertas tipografías puede provocar que el punto de la i “choque” con la parte superior de la efe.&lt;/p&gt;
+
+&lt;p&gt;Desde hace un tiempo, CSS3 soporta experimentalmente las tipografías con ligaduras.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, para usar ligaduras no basta con escribir las propiedades CSS adecuadas. La fuente que utilicemos debe tener definidos glifos para las ligaduras más comunes.&lt;/p&gt;
+
+&lt;p&gt;La fuente tipo serif de esta web, &lt;a href=&quot;http://www.calendasplus.com&quot;&gt;Calendas Plus&lt;/a&gt;, es un ejemplo excelente de tipografía con ligaduras. He aquí una captura de pantalla de varias de sus propuestas:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ligaturas.png&quot; alt=&quot;Ligaduras de Calendas Plus&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para activar las ligaduras, y dado que estamos ante un código experimental, tenemos que usar dos sintaxis diferentes y el prefijo &lt;code&gt;webkit&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-variant-ligatures: common-ligatures;
+	font-variant-ligatures: common-ligatures;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;text-rendering&lt;/code&gt; forma parte de una especificación más amplia, la cual indica al navegador cómo deseamos que se rendericen las fuentes. En este caso, optimizar legibilidad provoca la activación de las ligaduras, entre otros efectos.&lt;/p&gt;
+
+&lt;p&gt;Por su parte, ‘font-variant-ligatures’ es una propiedad mucho más específica que, como su nombre indica, activa las ligaduras.&lt;/p&gt;
+
+&lt;p&gt;Ambas son actualmente “recomendaciones”, siendo &lt;code&gt;font-variant-ligatures&lt;/code&gt; una recomendación &lt;strong&gt;candidata&lt;/strong&gt; Esto significa que ambas tienen muchas posibilidades de acabar formando parte de la especificación oficial de CSS, y es por esto que la mayoría de los navegadores modernos las entienden sin problemas.&lt;/p&gt;
+
+&lt;p&gt;Además, los navegadores incapaces de renderizar las ligaduras simplemente muestran las letras originales. Es por ello que usar estas propiedades CSS, pese a no ser aún oficiales, es &lt;strong&gt;seguro&lt;/strong&gt; a nivel de SEO, accesibilidad y legibilidad.&lt;/p&gt;
+
+&lt;h2 id=&quot;campo-de-pruebas&quot;&gt;Campo de pruebas&lt;/h2&gt;
+
+&lt;p&gt;En esta web, un texto susceptible de ser ligado se ve de la siguiente manera:&lt;/p&gt;
+
+&lt;p style=&quot;font-size:3rem; text-align:center; line-height:3rem&quot;&gt;fi, fl, ffi, ffl&lt;/p&gt;
+
+&lt;p&gt;Sin activar las ligaduras en el CSS, se vería así:&lt;/p&gt;
+
+&lt;p style=&quot;font-size:3rem; text-align:center; line-height:3rem; text-rendering: optimizeSpeed;
+	-webkit-font-variant-ligatures: no-common-ligatures;
+	font-variant-ligatures: no-common-ligatures;&quot;&gt;fi, fl, ffi, ffl&lt;/p&gt;
+
+&lt;p&gt;Las ligaduras que se activan automáticamente, no obstante, son &lt;strong&gt;muy pocas&lt;/strong&gt; respecto al total de ligaduras que una fuente como Calendas Plus tiene.&lt;/p&gt;
+
+&lt;p&gt;Para usar las ligaduras que no aparecen automáticamente, podemos inspeccionar la fuente usando herramientas como el catálogo tipográfico de Mac para obtener al código Unicode de cada grafema. También podemos consultar directamente las ligaduras más comunes en &lt;a href=&quot;http://adamdscott.com/ligatures-on-the-web/&quot;&gt;artículos como éste&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una vez tenemos el codigo, en sitios como &lt;a href=&quot;http://unicode-table.com/es/&quot;&gt;Unicode Table&lt;/a&gt; podemos obtener la entidad html adecuada.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, en Calendas Plus la ligatura &lt;strong&gt;Œ&lt;/strong&gt; - que no se activa al escribir “OE” - corresponde al carácter Unicode &lt;code&gt;U+0152&lt;/code&gt;. Según &lt;a href=&quot;http://unicode-table.com/es/0152/&quot;&gt;Unicode Table&lt;/a&gt;, su entidad HTML es &lt;code&gt;&amp;amp;#338;&lt;/code&gt; o &lt;code&gt;&amp;amp;OElig;&lt;/code&gt;. Escribimos:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;p&amp;gt;&amp;amp;#338;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Y obtenemos:&lt;/p&gt;
+
+&lt;p style=&quot;font-size:3rem; text-align:center;&quot;&gt;&amp;OElig;&lt;/p&gt;
+
+&lt;h2 id=&quot;un-mundo-imperfecto&quot;&gt;Un mundo imperfecto&lt;/h2&gt;
+
+&lt;p&gt;No soy para nada un experto en tipografía web, pero lo poco que sé me sirve para saber que es un mundo complejo y un poco caótico.&lt;/p&gt;
+
+&lt;p&gt;Existen multipicidad de formatos de fuente, como todo el que se haya enfrentado a un &lt;code&gt;@font-face&lt;/code&gt; sabe.&lt;/p&gt;
+
+&lt;p&gt;El correcto funcionamiento de las ligaduras y la capacidad de usar entidades html dependerá, en última instancia, del esfuerzo que hayan hecho los autores de la fuente en preparar sus fuentes para la web y/o de lo correctamente que haya hecho su trabajo el conversor de fuentes.&lt;/p&gt;
+
+&lt;p&gt;En mi caso, Calendas Plus es una excelente fuente enfocada al medio escrito que &lt;em&gt;no&lt;/em&gt; viene preparada para un &lt;code&gt;@font-face&lt;/code&gt;. Se descarga sólo en formato &lt;code&gt;*.otf&lt;/code&gt;, y hay que realizar la conversión manualmente.&lt;/p&gt;
+
+&lt;p&gt;Para usarla en esta web, la pasé por el conocido &lt;a href=&quot;http://www.fontsquirrel.com/tools/webfont-generator&quot;&gt;Webfont Kit Generator de FontSquirrell&lt;/a&gt;. En algún punto, desconozco por qué, ligaduras como la que une la ese con la te dejaron de funcionar, pese a ser ligaduras “oficiales” con su entidad HTML bien asentada y su UNICODE asignado. Si la uso, aparece lo siguiente:&lt;/p&gt;
+
+&lt;p style=&quot;font-size:3rem; text-align:center;&quot;&gt;ﬆ&lt;/p&gt;
+
+&lt;p&gt;En lugar de:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ligaturast.png&quot; alt=&quot;Ligatura ST original&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo cual nos lleva a otra pequeña frustración: Calendas Plus viene con una tonelada de ligaduras increíbles que muestran en su &lt;a href=&quot;http://www.calendasplus.com&quot;&gt;página web&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ligatura-muestra.png&quot; alt=&quot;Muestra de Ligaduras en Calendas Plus&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, la mayoría de ellas son ligaduras &lt;em&gt;propias&lt;/em&gt; de la fuente, accesibles a través de un inspector de glifos como los de Word o Adobe pero &lt;strong&gt;inexistentes en el estándar internacional UNICODE y, por tanto, &lt;em&gt;totalmente&lt;/em&gt; inútiles en la web&lt;/strong&gt; (desde el punto de vista de la tipografía, claro).&lt;/p&gt;
+
+&lt;p&gt;Una pena, porque estamos hablando de ligaduras tan geniales como las siguientes:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/ligatures-weirdo.png&quot; alt=&quot;Ligaduras raras&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En definitiva, merece &lt;em&gt;mucho&lt;/em&gt; la pena optar por fuentes que incluyen ligaduras, ya que en tamaños pequeños aumentan la legibilidad y en grandes resultan de gran belleza.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, todavía queda mucho camino por recorrer para poder explotar todo el potencial creativo de las ligaduras en la tipografía web. En comparación con su uso en diseño gráfico (inDesign, Photoshop), nos encontramos con dos grandes limitaciones:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;La necesidad de que los autores de la fuente acomentan el enorme trabajo de adaptar todos los formatos a la web&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Las limitaciones del UNICODE: la necesidad de trabajar con un elenco predeterminado de opciones y la imposibilidad técnica de acceder a todas las posibilidades que los autores de la tipografía hayan preparado.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 11 Jul 2015 02:00:00 +0200</pubDate>
+        <link>http://idiazroncero.com/diseno-web/usar-ligaturas-en-tipografia-web/</link>
+        <guid isPermaLink="true">http://idiazroncero.com/diseno-web/usar-ligaturas-en-tipografia-web/</guid>
+        
+        <category>tipografia</category>
+        
+        <category>ligaduras</category>
+        
+        <category>css</category>
+        
+        
+        <category>diseno-web</category>
+        
+      </item>
+    
+      <item>
+        <title>Cómo se hizo el título de este blog: siglas y acrónimos animados usando puro CSS3</title>
+        <description>&lt;p&gt;El encabezado de este blog fue un pequeño reto personal que me propuse realizar usando sólo CSS3. Es una idea muy vistosa y que &lt;strong&gt;puede quedar especialmente bien con acrónimos y siglas&lt;/strong&gt;, definiendo dos estados del título - “contraído” y “expandido” - que son activados al pasar el ratón por encima del título.&lt;/p&gt;
+
+&lt;p&gt;Además, al utilizar puro CSS3 y no depender de modificaciones en el DOM&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, esta técnica degrada grácilmente en lectores para invidentes o en ausencia de Javascript.&lt;/p&gt;
+
+&lt;p&gt;Otra ventaja de usar sólo CSS3 es que no interfiere en absoluto con el SEO o las metatags de redes sociales (open graph, twitter cards), las cuales leen sin problemas el título en su formato “expandido”;&lt;/p&gt;
+
+&lt;p&gt;Este tutorial muestra cómo lograr la versión más básica del efecto, que es la siguiente (pasa el ratón sobre &lt;em&gt;“UN”&lt;/em&gt; para verlo en acción):&lt;/p&gt;
+
+&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;qdxBJW&quot; data-default-tab=&quot;result&quot; data-user=&quot;idiazroncero&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/idiazroncero/pen/qdxBJW/&quot;&gt;Título animado en :hover&lt;/a&gt; by Ignacio Díaz-Roncero Fraile (&lt;a href=&quot;http://codepen.io/idiazroncero&quot;&gt;@idiazroncero&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;trocea-el-ttulo&quot;&gt;1.- Trocea el título&lt;/h2&gt;
+
+&lt;p&gt;Para lograr la animación por separado de cada letra necesitamos declarar un &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; por cada letra del título. Además, con el objetivo de poder tratar independientemente los atributos de cada letra, le daremos a cada &lt;code&gt;span&lt;/code&gt; una clase diferente.&lt;/p&gt;
+
+&lt;p&gt;Los puristas del &lt;a href=&quot;https://en.bem.info/method/&quot;&gt;BEM&lt;/a&gt; y &lt;a href=&quot;http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss&quot;&gt;OOCSS&lt;/a&gt; me matarán al ver esto, pero mi estrategia para poder saber exactamente qué clase pertenece a cada letra es asignar a cada una un nombre igual a lo que llevamos del título hasta su posicion. Es decir, mientras que la primera &lt;em&gt;n&lt;/em&gt; de &lt;em&gt;United Nations&lt;/em&gt; toma la clase &lt;code&gt;.un&lt;/code&gt;, la segunda es &lt;code&gt;.united-n&lt;/code&gt; y la última &lt;code&gt;.united-nation&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Cada cual puede tomar aquí la estrategia de nomenclatura que mas le plazca.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;
+    &amp;lt;span class=&amp;quot;u&amp;quot;&amp;gt;U&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;un&amp;quot;&amp;gt;n&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;uni&amp;quot;&amp;gt;i&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;unit&amp;quot;&amp;gt;t&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;unite&amp;quot;&amp;gt;e&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united&amp;quot;&amp;gt;d&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united-&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united-n&amp;quot;&amp;gt;N&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united-na&amp;quot;&amp;gt;a&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united-nat&amp;quot;&amp;gt;t&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united-nati&amp;quot;&amp;gt;i&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united-natio&amp;quot;&amp;gt;o&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united-nation&amp;quot;&amp;gt;n&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;united-nations&amp;quot;&amp;gt;s&amp;lt;/span&amp;gt;
+&amp;lt;/h1&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Puesto que, como veremos más adelante, el 99% de la técnica consiste en &lt;strong&gt;animar la propiedad &lt;code&gt;max-height&lt;/code&gt;&lt;/strong&gt;, necesitamos que cada &lt;code&gt;span&lt;/code&gt; se comporte como un elemento de tipo block&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Sin embargo, declarar un simple &lt;code&gt;display:block&lt;/code&gt; provocará que cada letra tome una línea diferente, rompiendo el título.&lt;/p&gt;
+
+&lt;p&gt;Una opción es flotar a la izquierda cada &lt;code&gt;span&lt;/code&gt;, pero esto nos impedirá aplicarle a &lt;code&gt;h1&lt;/code&gt; el &lt;code&gt;text-align:center&lt;/code&gt; que hace que, al expandirse, el texto crezca de manera automática &lt;strong&gt;desde el centro hacia los extremos&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Es por ello que sólo nos queda usar &lt;code&gt;display: inline-block&lt;/code&gt;. Y aquí nos vamos a encontrar con el primer problema.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;h1 span {
+  display:inline-block;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Bienvenidos a uno de los problemas más &lt;del&gt;coñazo&lt;/del&gt; pesados que conozco en HTML. No voy a explicarlo entero, puesto que hay un &lt;a href=&quot;https://css-tricks.com/fighting-the-space-between-inline-block-elements/&quot;&gt;post excelente en CSS-tricks&lt;/a&gt;. El resultado de usar &lt;code&gt;inline block&lt;/code&gt; sobre un HTML escrito &lt;em&gt;para humanos&lt;/em&gt; (es decir, separando cada &lt;code&gt;span&lt;/code&gt; con un salto de línea) es que aparece un indeseable espacio entre letras:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/inline-block.png&quot; alt=&quot;Un efecto indeseado&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En el &lt;a href=&quot;https://css-tricks.com/fighting-the-space-between-inline-block-elements/&quot;&gt;enlace anteriormente citado&lt;/a&gt; tenéis varias técnicas para resolverlo. Yo suelo, o bien agolparlo todo y hacerlo ilegible:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;
+  &amp;lt;span class=&amp;quot;u&amp;quot;&amp;gt;U&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;un&amp;quot;&amp;gt;n&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;uni&amp;quot;&amp;gt;i&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;unit&amp;quot;&amp;gt;t&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;unite&amp;quot;&amp;gt;e&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;united&amp;quot;&amp;gt;d&amp;lt;/span&amp;gt;...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;O bien aplico el truco descrito en CSS-Tricks por el cual se “engaña” al HTML poniendo las tags de apertura y cierre de cada &lt;code&gt;span&lt;/code&gt; en líneas diferentes:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;h1&amp;gt;
+  &amp;lt;span class=&amp;quot;u&amp;quot;&amp;gt;
+  U&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;un&amp;quot;&amp;gt;
+  n&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;uni&amp;quot;&amp;gt;
+  i&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;unit&amp;quot;&amp;gt;
+  t&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;unite&amp;quot;&amp;gt;
+  e&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;united&amp;quot;&amp;gt;
+  d&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;united-&amp;quot;&amp;gt;
+  &amp;amp;nbsp;&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;united-n&amp;quot;&amp;gt;
+  N&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;united-na&amp;quot;&amp;gt;
+  a&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;quot;united-nat&amp;quot;&amp;gt;
+  ...&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Esto debería volver el título a la normalidad y nos debería servir para pasar a la siguiente fase:&lt;/p&gt;
+
+&lt;h2 id=&quot;centrar-y-esconder-lo-que-sobra&quot;&gt;2.- Centrar y esconder lo que sobra.&lt;/h2&gt;
+
+&lt;p&gt;No es estrictamente obligatorio, pero el efecto gana enteros si se hace desde el centro hacia ambos extremos. Esto se consigue simplemente centrando el texto. Como decía antes, es por esto que no podíamos usar &lt;code&gt;float:left&lt;/code&gt; para solucionar el problema del inline-block.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;h1 {
+  text-align:center;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Es el momento de aderezar nuestra tipografía. Quizá quieras poner todo en &lt;code&gt;uppercase&lt;/code&gt;, modificar la &lt;code&gt;font-family&lt;/code&gt; o usar algún efecto de &lt;code&gt;text-shadow&lt;/code&gt;. Es posible que los efectos más agresivos provoquen algún problema, especialmente si aumentan el tamaño que ocupa cada letra (sombras, fondos y bordes incluídos). Como siempre, se impone el ensayo y error y cierta mesura.&lt;/p&gt;
+
+&lt;p&gt;Una vez tengamos nuestro título, es el momento de ocultar las letras que &lt;strong&gt;no forman parte del título en versión corta&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Necesitamos que las propiedades CSS que vamos a modificar sean animables usando &lt;code&gt;transition&lt;/code&gt;. Es por ello que debemos prescindir de dos sospechosos habituales: &lt;code&gt;display:none&lt;/code&gt; y &lt;code&gt;visibility:hidden&lt;/code&gt;. En su lugar, vamos a utilizar el ancho y la opacidad de cada letra:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;.un, 
+.uni, 
+.unit, 
+.unite,
+.united,
+.united-,
+.united-na,
+.united-nat,
+.united-nati,
+.united-natio,
+.united-nation,
+.united-nations {
+  max-width:0;
+  opacity:0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Aquí es donde alguien me dirá, con razón, que se podría simplificar esto añadiendo una clase del tipo &lt;code&gt;.oculto&lt;/code&gt; a cada letra. Cierto es. A mí, personalmente, me gusta añadir este extra de trabajo a cambio de poder añadir y quitar letras del efecto directamente desde el CSS.&lt;/p&gt;
+
+&lt;p&gt;Hecho esto, ya tenemos un título reducido a su acrónimo, y sólo queda animar la aparición de las letras.&lt;/p&gt;
+
+&lt;h2 id=&quot;animar-onhover&quot;&gt;3.- Animar on:hover&lt;/h2&gt;
+
+&lt;p&gt;El truco conoce en saber que &lt;code&gt;height&lt;/code&gt; y &lt;code&gt;width&lt;/code&gt; tienen muchos problemas para ser animados usando transiciones de CSS3. Sólo funcionan si conoces los valores de salida y llegada (por ejemplo, si animas de un ancho de &lt;code&gt;10px&lt;/code&gt; a uno de &lt;code&gt;30px&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;En nuestro caso no sabemos los valores de ancho de cada letra, puesto que esto depende de la tipografía&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. Podríamos calcularlo usando una regla en pantalla, Photoshop o un inspector tipo Firebug, pero sería estúpido ya que si cambiamos de tamaño o de tipografía tendremos que rehacer todo el trabajo.&lt;/p&gt;
+
+&lt;p&gt;La solución consiste en &lt;strong&gt;animar el &lt;code&gt;max-height&lt;/code&gt;&lt;/strong&gt;. Como hemos visto, un valor de &lt;code&gt;0&lt;/code&gt; oculta totalmente la letra. Sin embargo, un valor de &lt;code&gt;999px&lt;/code&gt; &lt;strong&gt;no convierte cada letra en un monstruo de mil píxeles de ancho&lt;/strong&gt; ya que este tamaño sólo indica &lt;em&gt;el techo máximo que no se puede sobrepasar&lt;/em&gt;. No hace falta decir que 999px es un valor aleatorio, y que nos servirá cualquier cifra imposible de ser sobrepasada.&lt;/p&gt;
+
+&lt;p&gt;Dicho esto, toda la magia de este efecto reside en dos líneas de CSS.&lt;/p&gt;
+
+&lt;p&gt;La primera declara una transición sobre todos los valores de los &lt;code&gt;span&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;h1 span {
+  transition: all 2s ease-in-out;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;La segunda actúa sobre &lt;code&gt;h1:hover&lt;/code&gt; y aplica a todas las letras los nuevos valores de opacidad y max-height que serán animados. No hay que preocuparse por las letras ya visibles, ya que no tienen propiedades CSS declaradas para &lt;code&gt;opacity&lt;/code&gt; y &lt;code&gt;max-height&lt;/code&gt; y &lt;code&gt;transition&lt;/code&gt; sólo opera cuando existen valores de llegada y de partida.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;h1:hover span {
+  max-width: 999px;
+  opacity: 1;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sin embargo, el efecto no resulta muy atractivo. La transición realiza en 2 segundos el cálculo de todos los valores a la vez, por lo que el resultado es un texto en el que todas las letras restantes se &lt;em&gt;estiran&lt;/em&gt; y &lt;em&gt;encienden&lt;/em&gt; simultáneamente (ver ejemplo):&lt;/p&gt;
+
+&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;WvMvoe&quot; data-default-tab=&quot;result&quot; data-user=&quot;idiazroncero&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/idiazroncero/pen/WvMvoe/&quot;&gt;Título animado en :hover sin delay&lt;/a&gt; by Ignacio Díaz-Roncero Fraile (&lt;a href=&quot;http://codepen.io/idiazroncero&quot;&gt;@idiazroncero&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;No está mal del todo pero no hemos estado poniendo clases CSS letra por letra para ésto.&lt;/p&gt;
+
+&lt;h2 id=&quot;el-toque-final&quot;&gt;4.- El toque final&lt;/h2&gt;
+
+&lt;p&gt;Lo que falta es &lt;strong&gt;hacer que las letras vayan saliendo en orden (o desorden)&lt;/strong&gt;, y para esto nos apoyamos en la propiedad &lt;code&gt;transition-delay&lt;/code&gt; que, como su nombre indica, añade un retraso en el inicio de la ejecución de la transición.&lt;/p&gt;
+
+&lt;p&gt;De paso, sirve para justificar el por qué de dar a cada &lt;code&gt;span&lt;/code&gt; una clase diferente.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;.un { transition-delay: 0.16s}
+.uni { transition-delay: 0.32s}
+.unit { transition-delay: 0.48s}
+.unite { transition-delay: 0.64s}
+.united { transition-delay: 0.8s}
+.united- { transition-delay: 0.96s}
+.united-na { transition-delay: 1.12s}
+.united-nat { transition-delay: 1.28s}
+.united-nati { transition-delay: 1.44s}
+.united-natio { transition-delay: 1.6s}
+.united-nation { transition-delay: 1.76s}
+.united-nations { transition-delay: 1.92s}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Voilà!&lt;/p&gt;
+
+&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;qdxBJW&quot; data-default-tab=&quot;result&quot; data-user=&quot;idiazroncero&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/idiazroncero/pen/qdxBJW/&quot;&gt;Título animado en :hover&lt;/a&gt; by Ignacio Díaz-Roncero Fraile (&lt;a href=&quot;http://codepen.io/idiazroncero&quot;&gt;@idiazroncero&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Para el título de este blog y para este ejemplo, mi técnica ha sido dividir la duración de la transición (2s) entre el número de letras (12) con el objetivo de que la última transición se dispare más o menos cuando la primera finaliza. Sin embargo, aquí hay un espacio muy amplio para experimentar.&lt;/p&gt;
+
+&lt;p&gt;Del mismo modo, en este ejemplo las letras aparecen &lt;strong&gt;en orden&lt;/strong&gt;. Sin embargo, en el título de este blog lo hacen &lt;strong&gt;desordenadas&lt;/strong&gt;: basta con distribuir aleatoriamente los valores de &lt;code&gt;transition-delay&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;También podemos animar otros valores. Por ejemplo, en el título de este blog cada letra tiene un color que es animado hacia el gris al mismo tiempo que &lt;code&gt;max-width&lt;/code&gt; y &lt;code&gt;opacity&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/idr-color.png&quot;&gt;
+		&lt;img src=&quot;/images/idr-color.png&quot; alt=&quot;En idiaz.roncero, cada letra tiene un color de partida que se va convirtiendo en gris&quot; /&gt;
+	&lt;/a&gt;
+&lt;figcaption&gt;
+    En idiaz.roncero, cada letra tiene un color de partida que se va convirtiendo en gris
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;En definitiva, se trata de una técnica muy sencilla y agradecida que abre todo un abanico de oportunidades y que además nos ha servido para introducir dos cuestiones importantes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cómo animar anchuras desconocidas usando CSS Transitions&lt;/li&gt;
+  &lt;li&gt;Cómo solucionar el problema del espacio sobrante entre elementos inline-block.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Para los recién llegados: Document Object Model. Explicación rápida: es el “mapa” de la estructura jerárquica definida en el HTML (los elementos y las relaciones que hay entre ellos), al cual acude Javascript para realizar sus modificaciones (por ejemplo: buscar todos los &lt;code&gt;div&lt;/code&gt; hijos de un &lt;code&gt;header&lt;/code&gt; con determinada &lt;code&gt;class&lt;/code&gt; y eliminarlos).&lt;/p&gt;
+
+      &lt;p&gt;Muchas de las animaciones y efectos que se basan en jQuery suelen modificar el DOM añadiendo y eliminando elementos. El problema: un navegador sin javascript o un lector para invidentes no &lt;em&gt;ven&lt;/em&gt; estos cambios ya que no forman parte del HTML original. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Esto se debe a que los elementos tipo inline, como &lt;code&gt;span&lt;/code&gt;, no aceptan valores definidos de &lt;code&gt;height&lt;/code&gt; o &lt;code&gt;width&lt;/code&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;A no ser que estemos usando una fuente monospace, claro… &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 01 Jul 2015 02:00:00 +0200</pubDate>
+        <link>http://idiazroncero.com/diseno-web/como-se-hizo-el-titulo-de-este-blog/</link>
+        <guid isPermaLink="true">http://idiazroncero.com/diseno-web/como-se-hizo-el-titulo-de-este-blog/</guid>
+        
+        <category>css3</category>
+        
+        <category>codepen</category>
+        
+        <category>animacion</category>
+        
+        <category>ideas</category>
+        
+        
+        <category>diseno-web</category>
+        
+      </item>
+    
+      <item>
+        <title>Traduciendo la interfaz de Baker Framework</title>
+        <description>&lt;h2 id=&quot;qu-es-baker-framework&quot;&gt;Qué es Baker Framework&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.bakerframework.com/&quot;&gt;Baker&lt;/a&gt; es un excelente entorno de trabajo (framework) dedicado a la publicación de contenidos digitales en iPad y iPhone.&lt;/p&gt;
+
+&lt;p&gt;En términos menos abstractos, Baker es una plantilla prediseñada de xCode, el entorno de desarrollo de Apple. Baker viene preparado para que, sin saber ni jota de Swift o Objective-C (los lenguajes con que se programan apps) puedas poner en el App Store desde un simple folleto hasta una extensa librería digital.&lt;/p&gt;
+
+&lt;p&gt;Con Baker se han hecho informes, revistas, libros de cuentos, periódicos, experimentos digitales, panfletos…&lt;/p&gt;
+
+&lt;p&gt;La mayor fortaleza de Baker, aparte de su gratuidad, es que cada número a publicar es básicamente un micrositio web. Se escribe en HTML, CSS y JS. Entiende de Media Queries, @font-face y CSS3. Si lo ves en tu navegador, lo ves en el iPad.&lt;/p&gt;
+
+&lt;p&gt;Es decir, &lt;strong&gt;si sabes cómo hacer páginas web, ya sabes también cómo hacer una revista digital en formato App&lt;/strong&gt;. En un mercado en el que las soluciones de publicación digital en formato App no bajan de los 1500$ anuales + 300$ por número publicado, Baker brilla con luz propia.&lt;/p&gt;
+
+&lt;h2 id=&quot;la-traduccin-de-la-interfaz&quot;&gt;La traducción de la interfaz.&lt;/h2&gt;
+
+&lt;p&gt;Actualmente estoy usando Baker para un proyecto que posiblemetne verá la luz en otoño de 2015. Como parte de este proyecto, tuve que localizar (traducir) los mensajes de la interfaz por defecto de Baker. Mensajes como &lt;em&gt;“número descargado”&lt;/em&gt;, &lt;em&gt;“no disponible”&lt;/em&gt; o &lt;em&gt;“suscríbete”&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;He contribuido dicho código a la &lt;a href=&quot;https://github.com/bakerframework/baker/wiki/Localized-interface#existing-localizations&quot;&gt;Wiki de baker&lt;/a&gt;, de modo que todo aquel que quiera traducir su App al castellano tenga el trabajo ya realizado.&lt;/p&gt;
+
+&lt;p&gt;Podéis verlo también en &lt;a href=&quot;https://gist.github.com/idiazroncero/b3b58ee586a2264d2746&quot;&gt;este gist&lt;/a&gt;:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/idiazroncero/b3b58ee586a2264d2746.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;cmo-traducir-tu-proyecto&quot;&gt;Cómo traducir tu proyecto&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Abre/crea un proyecto basado en Baker usando xCode&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Por defecto, el único idioma activado es el inglés. Para acceder a la información de localizaciones, selecciona primero tu App como proyecto (xCode diferencia entre el “proyecto” y el “target”):&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/baker01.jpg&quot; alt=&quot;Selecciona &amp;quot;proyecto&amp;quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Cambiará la información que aparece en el centro del editor. En la pestaña “Info”, busca la sección “Localizations” y pulsa el botón +  para añadir el idioma español:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/baker02.jpg&quot; alt=&quot;Añade &amp;quot;Spanish&amp;quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aparecerá un pop-up. Acepta para crear una versión del archivo original (en inglés).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Navega, usando la barra lateral, hasta Baker &amp;gt; Supporting Files &amp;gt; Localizable.strings &amp;gt; Localizable.strings (Spanish)&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;/images/baker03.jpg&quot; alt=&quot;Busca el archivo creado&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copia y pega el contenido de mi &lt;a href=&quot;https://gist.github.com/idiazroncero/b3b58ee586a2264d2746&quot;&gt;gist&lt;/a&gt;. Modifica lo que consideres oportuno&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Salva el archivo. ¡Listo!&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Xcode es gratuito, sólo funciona en Mac y se puede descargar &lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;aquí&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Como dice el comentario en el gist, mi proyecto usa “subscripción” en lugar de “suscripción” debido a que esta es la decisión editorial del proyecto para el que se realizó la traducción. No obstante, la RAE recomienda &lt;a href=&quot;http://www.fundeu.es/consulta/suscripcion-1173/&quot;&gt;suscripción&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 29 Jun 2015 02:00:00 +0200</pubDate>
+        <link>http://idiazroncero.com/apps/traduciendo-la-interfaz-de-baker-framework/</link>
+        <guid isPermaLink="true">http://idiazroncero.com/apps/traduciendo-la-interfaz-de-baker-framework/</guid>
+        
+        <category>baker</category>
+        
+        <category>i18n</category>
+        
+        <category>l10n</category>
+        
+        <category>gist</category>
+        
+        
+        <category>apps</category>
+        
+      </item>
+    
+      <item>
+        <title>Unas palabras sobre idiaz.roncero</title>
+        <description>&lt;p&gt;Si escribir unas líneas de presentación siempre es complicado, esto es aún más cierto cuando la persona detrás del teclado es más bien enemiga de los focos.&lt;/p&gt;
+
+&lt;p&gt;El caso es que un blog personal, mal que me pese, está ligado necesariamente a &lt;em&gt;alguien&lt;/em&gt; que afirma hacer &lt;em&gt;algo&lt;/em&gt; y que, en este fuego de vanidades que es internet, tiene la osadía de considerar ese &lt;em&gt;algo&lt;/em&gt; como digno del tiempo de los demás.&lt;/p&gt;
+
+&lt;p&gt;Visto así, el formato blog es bastante insoportable. Es por ello que en las siguientes líneas intentaré defender la utilidad que quiero dar a este sitio web.&lt;/p&gt;
+
+&lt;h2 id=&quot;quin-soy&quot;&gt;Quién soy&lt;/h2&gt;
+
+&lt;p&gt;Mi alias digital es &lt;strong&gt;idiaz.roncero&lt;/strong&gt;. Hay poco truco: en el palabro se incluyen mi nombre y apellidos. No es muy difícil de descifrar si me conoces o investigas mi currículum.&lt;/p&gt;
+
+&lt;p&gt;Trabajo como diseñador y desarrollador web en &lt;a href=&quot;http://www.elestadomental.com&quot; target=&quot;_blank&quot;&gt;El Estado Mental&lt;/a&gt;, probablemente la revista cultural más arriesgada e innovadora de España. En la parte web de EEM lo soy todo: desde administrador de sistemas hasta diseñador de la revista en formato App. Nunca en mi vida he aprendido tanto en tan poco tiempo.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, no soy desarrollador web. Ni diseñador gráfico. Siempre me interesó este mundo, pero en realidad yo quería ser escritor. Luego quise ser periodista. Luego quise ser periodista internacional. Y luego periodista internacional del mundo árabe e islámico. Tengo los títulos para demostrarlo.&lt;/p&gt;
+
+&lt;p&gt;El paro y la crisis se cruzaron en mi camino. Surgió una oportunidad, y aprendí a hacer webs junto con mi amigo Carlos Fernández Barbudo. Después, yo solo. Cometiendo errores y aprendiendo de ellos. El resto está ya todo contado.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-qu-idiazroncero&quot;&gt;Para qué idiaz.roncero&lt;/h2&gt;
+
+&lt;p&gt;Este blog intentará, en parte, &lt;strong&gt;hacer útiles las técnicas y trucos que he ido aprendiendo en tres años de pelea autodidacta contra los elementos.&lt;/strong&gt; Dichos &lt;em&gt;elementos&lt;/em&gt; son básicamente la masa madre del web: CSS, SASS, HTML5 y Javascript. Pero no sólo: también sus hijos y parientes cercanos: los ubicuos JQuery/Zepto, frameworks como Foundation y Baker, CMS como Drupal 7 y Wordpress, librerías como Compass y Susy. Y también Shopify, Ruby on Rails, Jekyll (en el que se basa este blog), algo de línea de comandos, librerías de todo tipo, tipografías y recursos de lo más variopinto. Me dejo más de la mitad de las cosas. Tiempo al tiempo.&lt;/p&gt;
+
+&lt;p&gt;Si me preguntaran qué es lo que puedo aportar a un mundo ya saturado de recursos y tutoriales, lo resumiría en tres puntos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Soy autodidacta.&lt;/strong&gt; 
+Para muchos, especialmente para los que provienen de la formación reglada en informática, esto es como un enorme cartel de ¡PELIGRO!.&lt;/p&gt;
+
+    &lt;p&gt;Sin embargo, creo que ello me ha dado una mejor perspectiva acerca de cuáles son las trampas y las dificultades que esperan a la persona que inocentemente se acerca al diseño y desarrollo web. Sé dónde están los cuellos de botella, en qué puntos se estanca el aprendizaje y cómo salir de ello.&lt;/p&gt;
+
+    &lt;p&gt;Y lo sé desde el punto de vista del que lo ha sufrido.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Escribo en castellano&lt;/strong&gt; y además tengo formación periodística y literaria.&lt;/p&gt;
+
+    &lt;p&gt;¿Por qué debería ser esto un valor en sí? Desgraciadamente, el mundo excesivamente &lt;em&gt;geek&lt;/em&gt; de la web está muy escorado hacia lo masculino, angloparlante y técnico-obtuso. Esto es quizá menos cierto en la parte del diseño, marketing y UX&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, pero se hace especialmente evidente en el desarrollo web y la administración de sistemas.&lt;/p&gt;
+
+    &lt;p&gt;Siendo hombre, poco puedo hacer contra la &lt;em&gt;masculinidad del código&lt;/em&gt; (prometo, no obstante, no tratar el código como un símbolo de poder y estatus). Lo &lt;strong&gt;anglo&lt;/strong&gt; será minimizado (¡no diga tag, diga etiqueta!) sin caer en el absurdo. Por último, el lenguaje técnico-obtuso y el sacerdocio quedan oficialmente desterrados.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Muy poca gente cubre la enorme distancia que hay entre los tutoriales de &lt;a href=&quot;http://www.codecademy.com&quot; target=&quot;_blank&quot;&gt;Codecademy&lt;/a&gt; y las respuestas de &lt;a href=&quot;http://www.stackoverflow.com&quot; target=&quot;_blank&quot;&gt;StackOverflow&lt;/a&gt;&lt;/strong&gt; y yo habito precisamente en algún punto avanzado de esa gran llanura.&lt;/p&gt;
+
+    &lt;p&gt;Es en este desierto en el que el aspirante a programador/diseñador se pierde, se agosta y muere de inanición&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Si poca gente cubre este amplio campo en inglés, huelga decir que aún menos gente lo hace en castellano.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Soy un forastero.&lt;/strong&gt; Como bien reflexionan (y se cachondean) en series como Silicon Valley, el mundo &lt;em&gt;geek&lt;/em&gt; puede llegar a ser profundamente autorreferencial.&lt;/p&gt;
+
+    &lt;p&gt;En este mundo, yo soy un alien. No conozco chistes de desarrolladores versus diseñadores versus sysadmins. No estudié informática. Mis amigos son principalmente sociólogos, polítólogos y periodistas. Mi perfil es muy vaporoso: aunque prefiero el diseño web, he aprendido también algo de desarrollo y administración de sistemas. Simplemente voy aprendiendo lo que necesito para ser capaz de hacer mejor mi trabajo. Creo que ello me hace ser más torpe y lento, pero también capaz de aportar una mirada diferente sobre internet y la web.&lt;/p&gt;
+
+    &lt;p&gt;Creo que mi posición excéntrica me hace especialmente consciente de la tecnofilia que es una clara deformación profesional del mundo informático-&lt;em&gt;geek&lt;/em&gt;. Una tecnofilia desde la que muchas veces se llegan a conclusiones un tanto peligrosas sobre la cultura, la política o la sociedad. En este sentido, y afortunadamente para el debate (creo), temas como las licencias Creative Commons, el &lt;em&gt;hacking&lt;/em&gt; y el procomún no son deidades intocables en este blog.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;no-todo-es-web&quot;&gt;No todo es web&lt;/h2&gt;
+
+&lt;p&gt;El hecho de que ahora mismo sólo me sienta útil hablando de diseño web no quiere decir que vaya a dejar de lado las otras piezas de mi currículum.&lt;/p&gt;
+
+&lt;p&gt;Como dice la descripción de este blog, estamos ante un sitio &lt;em&gt;absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;No me miren raro. Me fascina la política iraní. Ha sido el tema de todos mis trabajos universitarios serios.&lt;/p&gt;
+
+&lt;p&gt;Relaciones internacionales, literatura, música, política nacional y otras variedades tendrán su sitio si así me apetece. No en vano, este es un blog personal y, como tal, tiene alma de &lt;em&gt;currículum vitae&lt;/em&gt; en perpetua construcción.&lt;/p&gt;
+
+&lt;p&gt;Si el resultado es esquizoide, si venían a buscar buenas librerías jQuery y acaban enredados en una diatriba sobre el estrecho de Ormuz, culpen a la crisis.&lt;/p&gt;
+
+&lt;p&gt;Al fin y al cabo, yo quería ser escritor y periodista.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;em&gt;UX design&lt;/em&gt; o símplemente &lt;em&gt;UX&lt;/em&gt; es la abreviatura que se da al diseño de la “experiencia de usuario”. Un diseñador &lt;em&gt;UX&lt;/em&gt; se preocupa, entre otras cosas, de que no desesperes buscando el botón de Aplicar o la sección de contacto. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Seamos justos. Existen recursos excelentes que cubren el amplio campo del que hablo. &lt;a href=&quot;http://www.alistapart.com&quot; target=&quot;_blank&quot;&gt;A List Apart&lt;/a&gt; y &lt;a href=&quot;http://www.smashingmagazine.com&quot; target=&quot;_blank&quot;&gt;Smashing Magazine&lt;/a&gt; son, sin duda, mis favoritos. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 24 Jun 2015 02:00:00 +0200</pubDate>
+        <link>http://idiazroncero.com/autobombo/unas-palabras-sobre-este-blog/</link>
+        <guid isPermaLink="true">http://idiazroncero.com/autobombo/unas-palabras-sobre-este-blog/</guid>
+        
+        
+        <category>autobombo</category>
+        
+      </item>
+    
+  </channel>
+</rss>
