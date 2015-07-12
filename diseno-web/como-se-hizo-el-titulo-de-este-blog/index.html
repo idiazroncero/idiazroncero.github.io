@@ -78,6 +78,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="/js/script.js"></script>
+  <script src="/js/prism.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -98,15 +99,15 @@
       <header class="header">
 	<div class="social-bar">
 		<div class="social-motto">
-			<p>idiazroncero.com | <span id="social-log">versión 0.3</span></p>
+			<p>idiazroncero.com | <span id="social-log">versión 0.4</span></p>
 			<div class="social-motto-log">
 				<p>¡estamos en beta!</p>
 				<p>Últimos cambios:</p>
 				<ul>
-					<li>Mensaje "en construcción"</li>
-					<li>Añadidos dos posts</li>
-					<li>Añadidas tags</li>
-					<li>Syntax Highlighting</li>
+					<li>Comentarios Disqus</li>
+					<li>Añadido un post</li>
+					<li>Mejorada Syntax Highlighting</li>
+					<li>Corregidos errores en portada</li>
 				</ul>
 			</div>
 		</div>
@@ -160,6 +161,8 @@
 		
 			<p>diseno-web</p>
 		
+			<p>diseño web</p>
+		
 	</div>
 </nav> -->
 </header>
@@ -203,22 +206,24 @@
 
 <p>Cada cual puede tomar aquí la estrategia de nomenclatura que mas le plazca.</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno"> 1</span> <span class="nt">&lt;h1&gt;</span>
-<span class="lineno"> 2</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;u&quot;</span><span class="nt">&gt;</span>U<span class="nt">&lt;/span&gt;</span>
-<span class="lineno"> 3</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;un&quot;</span><span class="nt">&gt;</span>n<span class="nt">&lt;/span&gt;</span>
-<span class="lineno"> 4</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;uni&quot;</span><span class="nt">&gt;</span>i<span class="nt">&lt;/span&gt;</span>
-<span class="lineno"> 5</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;unit&quot;</span><span class="nt">&gt;</span>t<span class="nt">&lt;/span&gt;</span>
-<span class="lineno"> 6</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;unite&quot;</span><span class="nt">&gt;</span>e<span class="nt">&lt;/span&gt;</span>
-<span class="lineno"> 7</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united&quot;</span><span class="nt">&gt;</span>d<span class="nt">&lt;/span&gt;</span>
-<span class="lineno"> 8</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/span&gt;</span>
-<span class="lineno"> 9</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-n&quot;</span><span class="nt">&gt;</span>N<span class="nt">&lt;/span&gt;</span>
-<span class="lineno">10</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-na&quot;</span><span class="nt">&gt;</span>a<span class="nt">&lt;/span&gt;</span>
-<span class="lineno">11</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nat&quot;</span><span class="nt">&gt;</span>t<span class="nt">&lt;/span&gt;</span>
-<span class="lineno">12</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nati&quot;</span><span class="nt">&gt;</span>i<span class="nt">&lt;/span&gt;</span>
-<span class="lineno">13</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-natio&quot;</span><span class="nt">&gt;</span>o<span class="nt">&lt;/span&gt;</span>
-<span class="lineno">14</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nation&quot;</span><span class="nt">&gt;</span>n<span class="nt">&lt;/span&gt;</span>
-<span class="lineno">15</span>     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nations&quot;</span><span class="nt">&gt;</span>s<span class="nt">&lt;/span&gt;</span>
-<span class="lineno">16</span> <span class="nt">&lt;/h1&gt;</span></code></pre></div>
+<div>
+  <pre data-line=""><code class="language-markup">&lt;h1&gt;
+    &lt;span class=&quot;u&quot;&gt;U&lt;/span&gt;
+    &lt;span class=&quot;un&quot;&gt;n&lt;/span&gt;
+    &lt;span class=&quot;uni&quot;&gt;i&lt;/span&gt;
+    &lt;span class=&quot;unit&quot;&gt;t&lt;/span&gt;
+    &lt;span class=&quot;unite&quot;&gt;e&lt;/span&gt;
+    &lt;span class=&quot;united&quot;&gt;d&lt;/span&gt;
+    &lt;span class=&quot;united-&quot;&gt;&amp;nbsp;&lt;/span&gt;
+    &lt;span class=&quot;united-n&quot;&gt;N&lt;/span&gt;
+    &lt;span class=&quot;united-na&quot;&gt;a&lt;/span&gt;
+    &lt;span class=&quot;united-nat&quot;&gt;t&lt;/span&gt;
+    &lt;span class=&quot;united-nati&quot;&gt;i&lt;/span&gt;
+    &lt;span class=&quot;united-natio&quot;&gt;o&lt;/span&gt;
+    &lt;span class=&quot;united-nation&quot;&gt;n&lt;/span&gt;
+    &lt;span class=&quot;united-nations&quot;&gt;s&lt;/span&gt;
+&lt;/h1&gt;</code></pre>
+</div>
 
 <p>Puesto que, como veremos más adelante, el 99% de la técnica consiste en <strong>animar la propiedad <code>max-height</code></strong>, necesitamos que cada <code>span</code> se comporte como un elemento de tipo block<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Sin embargo, declarar un simple <code>display:block</code> provocará que cada letra tome una línea diferente, rompiendo el título.</p>
 
@@ -226,9 +231,11 @@
 
 <p>Es por ello que sólo nos queda usar <code>display: inline-block</code>. Y aquí nos vamos a encontrar con el primer problema.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nt">h1</span> <span class="nt">span</span> <span class="p">{</span>
-<span class="lineno">2</span>   <span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-<span class="lineno">3</span> <span class="p">}</span></code></pre></div>
+<div>
+  <pre data-line=""><code class="language-css">h1 span {
+  display:inline-block;
+}</code></pre>
+</div>
 
 <p>Bienvenidos a uno de los problemas más <del>coñazo</del> pesados que conozco en HTML. No voy a explicarlo entero, puesto que hay un <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">post excelente en CSS-tricks</a>. El resultado de usar <code>inline block</code> sobre un HTML escrito <em>para humanos</em> (es decir, separando cada <code>span</code> con un salto de línea) es que aparece un indeseable espacio entre letras:</p>
 
@@ -236,23 +243,27 @@
 
 <p>En el <a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">enlace anteriormente citado</a> tenéis varias técnicas para resolverlo. Yo suelo, o bien agolparlo todo y hacerlo ilegible:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno">1</span> <span class="nt">&lt;h1&gt;</span>
-<span class="lineno">2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;u&quot;</span><span class="nt">&gt;</span>U<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;un&quot;</span><span class="nt">&gt;</span>n<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;uni&quot;</span><span class="nt">&gt;</span>i<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;unit&quot;</span><span class="nt">&gt;</span>t<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;unite&quot;</span><span class="nt">&gt;</span>e<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united&quot;</span><span class="nt">&gt;</span>d<span class="nt">&lt;/span&gt;</span>...</code></pre></div>
+<div>
+  <pre data-line=""><code class="language-markup">&lt;h1&gt;
+  &lt;span class=&quot;u&quot;&gt;U&lt;/span&gt;&lt;span class=&quot;un&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;uni&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;unit&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;unite&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;united&quot;&gt;d&lt;/span&gt;...</code></pre>
+</div>
 
 <p>O bien aplico el truco descrito en CSS-Tricks por el cual se “engaña” al HTML poniendo las tags de apertura y cierre de cada <code>span</code> en líneas diferentes:</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="lineno"> 1</span> <span class="nt">&lt;h1&gt;</span>
-<span class="lineno"> 2</span>   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;u&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 3</span>   U<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;un&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 4</span>   n<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;uni&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 5</span>   i<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;unit&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 6</span>   t<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;unite&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 7</span>   e<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 8</span>   d<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-&quot;</span><span class="nt">&gt;</span>
-<span class="lineno"> 9</span>   <span class="ni">&amp;nbsp;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-n&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">10</span>   N<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-na&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">11</span>   a<span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;united-nat&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">12</span>   ...</code></pre></div>
+<div>
+  <pre data-line=""><code class="language-markup">&lt;h1&gt;
+  &lt;span class=&quot;u&quot;&gt;
+  U&lt;/span&gt;&lt;span class=&quot;un&quot;&gt;
+  n&lt;/span&gt;&lt;span class=&quot;uni&quot;&gt;
+  i&lt;/span&gt;&lt;span class=&quot;unit&quot;&gt;
+  t&lt;/span&gt;&lt;span class=&quot;unite&quot;&gt;
+  e&lt;/span&gt;&lt;span class=&quot;united&quot;&gt;
+  d&lt;/span&gt;&lt;span class=&quot;united-&quot;&gt;
+  &amp;nbsp;&lt;/span&gt;&lt;span class=&quot;united-n&quot;&gt;
+  N&lt;/span&gt;&lt;span class=&quot;united-na&quot;&gt;
+  a&lt;/span&gt;&lt;span class=&quot;united-nat&quot;&gt;
+  ...</code></pre>
+</div>
 
 <p>Esto debería volver el título a la normalidad y nos debería servir para pasar a la siguiente fase:</p>
 
@@ -260,9 +271,11 @@
 
 <p>No es estrictamente obligatorio, pero el efecto gana enteros si se hace desde el centro hacia ambos extremos. Esto se consigue simplemente centrando el texto. Como decía antes, es por esto que no podíamos usar <code>float:left</code> para solucionar el problema del inline-block.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
-  <span class="k">text-align</span><span class="o">:</span><span class="k">center</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+<div>
+  <pre data-line=""><code class="language-css">h1 {
+  text-align:center;
+}</code></pre>
+</div>
 
 <p>Es el momento de aderezar nuestra tipografía. Quizá quieras poner todo en <code>uppercase</code>, modificar la <code>font-family</code> o usar algún efecto de <code>text-shadow</code>. Es posible que los efectos más agresivos provoquen algún problema, especialmente si aumentan el tamaño que ocupa cada letra (sombras, fondos y bordes incluídos). Como siempre, se impone el ensayo y error y cierta mesura.</p>
 
@@ -270,21 +283,23 @@
 
 <p>Necesitamos que las propiedades CSS que vamos a modificar sean animables usando <code>transition</code>. Es por ello que debemos prescindir de dos sospechosos habituales: <code>display:none</code> y <code>visibility:hidden</code>. En su lugar, vamos a utilizar el ancho y la opacidad de cada letra:</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno"> 1</span> <span class="nc">.un</span><span class="o">,</span> 
-<span class="lineno"> 2</span> <span class="nc">.uni</span><span class="o">,</span> 
-<span class="lineno"> 3</span> <span class="nc">.unit</span><span class="o">,</span> 
-<span class="lineno"> 4</span> <span class="nc">.unite</span><span class="o">,</span>
-<span class="lineno"> 5</span> <span class="nc">.united</span><span class="o">,</span>
-<span class="lineno"> 6</span> <span class="nc">.united-</span><span class="o">,</span>
-<span class="lineno"> 7</span> <span class="nc">.united-na</span><span class="o">,</span>
-<span class="lineno"> 8</span> <span class="nc">.united-nat</span><span class="o">,</span>
-<span class="lineno"> 9</span> <span class="nc">.united-nati</span><span class="o">,</span>
-<span class="lineno">10</span> <span class="nc">.united-natio</span><span class="o">,</span>
-<span class="lineno">11</span> <span class="nc">.united-nation</span><span class="o">,</span>
-<span class="lineno">12</span> <span class="nc">.united-nations</span> <span class="p">{</span>
-<span class="lineno">13</span>   <span class="k">max-width</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
-<span class="lineno">14</span>   <span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
-<span class="lineno">15</span> <span class="p">}</span></code></pre></div>
+<div>
+  <pre data-line=""><code class="language-css">.un, 
+.uni, 
+.unit, 
+.unite,
+.united,
+.united-,
+.united-na,
+.united-nat,
+.united-nati,
+.united-natio,
+.united-nation,
+.united-nations {
+  max-width:0;
+  opacity:0;
+}</code></pre>
+</div>
 
 <p>Aquí es donde alguien me dirá, con razón, que se podría simplificar esto añadiendo una clase del tipo <code>.oculto</code> a cada letra. Cierto es. A mí, personalmente, me gusta añadir este extra de trabajo a cambio de poder añadir y quitar letras del efecto directamente desde el CSS.</p>
 
@@ -302,16 +317,20 @@
 
 <p>La primera declara una transición sobre todos los valores de los <code>span</code>.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nt">h1</span> <span class="nt">span</span> <span class="p">{</span>
-<span class="lineno">2</span>   <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">2s</span> <span class="n">ease</span><span class="o">-</span><span class="n">in</span><span class="o">-</span><span class="n">out</span><span class="p">;</span>
-<span class="lineno">3</span> <span class="p">}</span></code></pre></div>
+<div>
+  <pre data-line=""><code class="language-css">h1 span {
+  transition: all 2s ease-in-out;
+}</code></pre>
+</div>
 
 <p>La segunda actúa sobre <code>h1:hover</code> y aplica a todas las letras los nuevos valores de opacidad y max-height que serán animados. No hay que preocuparse por las letras ya visibles, ya que no tienen propiedades CSS declaradas para <code>opacity</code> y <code>max-height</code> y <code>transition</code> sólo opera cuando existen valores de llegada y de partida.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno">1</span> <span class="nt">h1</span><span class="nd">:hover</span> <span class="nt">span</span> <span class="p">{</span>
-<span class="lineno">2</span>   <span class="k">max-width</span><span class="o">:</span> <span class="m">999px</span><span class="p">;</span>
-<span class="lineno">3</span>   <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-<span class="lineno">4</span> <span class="p">}</span></code></pre></div>
+<div>
+  <pre data-line=""><code class="language-css">h1:hover span {
+  max-width: 999px;
+  opacity: 1;
+}</code></pre>
+</div>
 
 <p>Sin embargo, el efecto no resulta muy atractivo. La transición realiza en 2 segundos el cálculo de todos los valores a la vez, por lo que el resultado es un texto en el que todas las letras restantes se <em>estiran</em> y <em>encienden</em> simultáneamente (ver ejemplo):</p>
 
@@ -326,18 +345,20 @@
 
 <p>De paso, sirve para justificar el por qué de dar a cada <code>span</code> una clase diferente.</p>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="lineno"> 1</span> <span class="nc">.un</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.16s</span><span class="p">}</span>
-<span class="lineno"> 2</span> <span class="nc">.uni</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.32s</span><span class="p">}</span>
-<span class="lineno"> 3</span> <span class="nc">.unit</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.48s</span><span class="p">}</span>
-<span class="lineno"> 4</span> <span class="nc">.unite</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.64s</span><span class="p">}</span>
-<span class="lineno"> 5</span> <span class="nc">.united</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.8s</span><span class="p">}</span>
-<span class="lineno"> 6</span> <span class="nc">.united-</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">0.96s</span><span class="p">}</span>
-<span class="lineno"> 7</span> <span class="nc">.united-na</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.12s</span><span class="p">}</span>
-<span class="lineno"> 8</span> <span class="nc">.united-nat</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.28s</span><span class="p">}</span>
-<span class="lineno"> 9</span> <span class="nc">.united-nati</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.44s</span><span class="p">}</span>
-<span class="lineno">10</span> <span class="nc">.united-natio</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.6s</span><span class="p">}</span>
-<span class="lineno">11</span> <span class="nc">.united-nation</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.76s</span><span class="p">}</span>
-<span class="lineno">12</span> <span class="nc">.united-nations</span> <span class="p">{</span> <span class="n">transition</span><span class="o">-</span><span class="n">delay</span><span class="o">:</span> <span class="m">1.92s</span><span class="p">}</span></code></pre></div>
+<div>
+  <pre data-line=""><code class="language-css">.un { transition-delay: 0.16s}
+.uni { transition-delay: 0.32s}
+.unit { transition-delay: 0.48s}
+.unite { transition-delay: 0.64s}
+.united { transition-delay: 0.8s}
+.united- { transition-delay: 0.96s}
+.united-na { transition-delay: 1.12s}
+.united-nat { transition-delay: 1.28s}
+.united-nati { transition-delay: 1.44s}
+.united-natio { transition-delay: 1.6s}
+.united-nation { transition-delay: 1.76s}
+.united-nations { transition-delay: 1.92s}</code></pre>
+</div>
 
 <p>Voilà!</p>
 
@@ -383,6 +404,19 @@
 </div>
 
   </article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'idiazroncero';
+      
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 </div>
 
