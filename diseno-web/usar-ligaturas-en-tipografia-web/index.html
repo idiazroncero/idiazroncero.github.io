@@ -207,9 +207,11 @@
 
 <p><code>text-rendering</code> forma parte de una especificación más amplia, la cual indica al navegador cómo deseamos que se rendericen las fuentes. En este caso, optimizar legibilidad provoca la activación de las ligaduras, entre otros efectos.</p>
 
-<p>Por su parte, ‘font-variant-ligatures’ es una propiedad mucho más específica que, como su nombre indica, activa las ligaduras.</p>
+<p>Por su parte, <code>font-variant-ligatures</code> es una propiedad mucho más específica que, como su nombre indica, activa las ligaduras.</p>
 
-<p>Ambas son actualmente “recomendaciones”, siendo <code>font-variant-ligatures</code> una recomendación <strong>candidata</strong> Esto significa que ambas tienen muchas posibilidades de acabar formando parte de la especificación oficial de CSS, y es por esto que la mayoría de los navegadores modernos las entienden sin problemas.</p>
+<p>Ateniendo a su compatibilidad en navegadores (cross-browser), podríamos decir que <code>text-rendering</code> sirve como alternativa (fallback) para navegadores que aún no hayan implementado <code>font-variant-ligatures</code> (especialmente Safari y Opera Mini).</p>
+
+<p>Ambas son actualmente “recomendaciones”, siendo <code>font-variant-ligatures</code> una recomendación <strong>candidata</strong> Esto significa que esta última tiene muchas posibilidades de acabar formando parte de la especificación oficial de CSS, y es por esto que la mayoría de los navegadores modernos la entiende ya sin problemas.</p>
 
 <p>Además, los navegadores incapaces de renderizar las ligaduras simplemente muestran las letras originales. Es por ello que usar estas propiedades CSS, pese a no ser aún oficiales, es <strong>seguro</strong> a nivel de SEO, accesibilidad y legibilidad.</p>
 
