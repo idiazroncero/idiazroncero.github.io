@@ -227,10 +227,10 @@ a:hover {
 }
 /* line 12, ../../_compass/base/_normalize-headings.scss */
 h1 {
-  font-size: 40px;
-  font-size: 2rem;
-  line-height: 45px;
-  line-height: 2.25rem;
+  font-size: 50px;
+  font-size: 2.5rem;
+  line-height: 60px;
+  line-height: 3rem;
   margin-top: 30px;
   margin-top: 1.5rem;
   margin-bottom: 30px;
@@ -240,8 +240,8 @@ h1 {
 }
 /* line 23, ../../_compass/base/_normalize-headings.scss */
 .admin-page #content h1 {
-  font-size: 27px;
-  font-size: 1.33rem;
+  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 45px;
   line-height: 2.25rem;
   text-align: left;
@@ -252,8 +252,8 @@ h1 {
 
 /* line 32, ../../_compass/base/_normalize-headings.scss */
 h2 {
-  font-size: 33px;
-  font-size: 1.66rem;
+  font-size: 40px;
+  font-size: 2rem;
   line-height: 45px;
   line-height: 2.25rem;
   margin-top: 30px;
@@ -261,13 +261,12 @@ h2 {
   margin-bottom: 30px;
   margin-bottom: 1.5rem;
   font-family: "Nexa", Helvetica, Arial, sans-serif;
-  font-weight: 400;
 }
 
-/* line 41, ../../_compass/base/_normalize-headings.scss */
+/* line 40, ../../_compass/base/_normalize-headings.scss */
 h3 {
-  font-size: 27px;
-  font-size: 1.33rem;
+  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 45px;
   line-height: 2.25rem;
   margin-top: 30px;
@@ -277,7 +276,7 @@ h3 {
   font-family: "Nexa", Helvetica, Arial, sans-serif;
 }
 
-/* line 49, ../../_compass/base/_normalize-headings.scss */
+/* line 48, ../../_compass/base/_normalize-headings.scss */
 h4 {
   font-size: 20px;
   font-size: 1rem;
@@ -290,7 +289,7 @@ h4 {
   font-family: "Nexa", Helvetica, Arial, sans-serif;
 }
 
-/* line 57, ../../_compass/base/_normalize-headings.scss */
+/* line 56, ../../_compass/base/_normalize-headings.scss */
 h5 {
   font-size: 16px;
   font-size: 0.8rem;
@@ -303,7 +302,7 @@ h5 {
   font-family: "Nexa", Helvetica, Arial, sans-serif;
 }
 
-/* line 65, ../../_compass/base/_normalize-headings.scss */
+/* line 64, ../../_compass/base/_normalize-headings.scss */
 h6 {
   font-size: 13px;
   font-size: 0.65rem;
@@ -801,7 +800,7 @@ h1, h2 {
 /* line 1, ../../_compass/modules/_idiazroncero.scss */
 .idr {
   *zoom: 1;
-  margin: 0.75rem 0 0 0;
+  margin: 0.75rem 0 1.5rem 0;
   padding: 0.75rem 0 0 0;
 }
 /* line 38, ../../../../.rvm/gems/ruby-2.1.2@octopress/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -829,45 +828,15 @@ h1, h2 {
 }
 /* line 19, ../../_compass/modules/_idiazroncero.scss */
 .idr:hover .idr-idi, .idr:hover .idr-idia, .idr:hover .idr-idiaz, .idr:hover .idr-idiaz_ro, .idr:hover .idr-idiaz_ron, .idr:hover .idr-idiaz_ronc, .idr:hover .idr-idiaz_ronce, .idr:hover .idr-idiaz_roncer, .idr:hover .idr-idiaz_roncero {
-  max-width: 999px;
-  /* Content for ie 8.
-  Min version: unspecified.
-  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  color: #ccc;
-}
-/* line 24, ../../_compass/modules/_idiazroncero.scss */
-.idr:hover .idr-motto {
-  /* Content for ie 8.
-  Min version: unspecified.
-  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  max-height: 999px;
-}
-/* line 30, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idi, .idr .idr-idia, .idr .idr-idiaz, .idr .idr-idiaz_ro, .idr .idr-idiaz_ron, .idr .idr-idiaz_ronc, .idr .idr-idiaz_ronce, .idr .idr-idiaz_roncer, .idr .idr-idiaz_roncero {
-  max-width: 0;
+  max-width: 0px;
   /* Content for ie 8.
   Min version: unspecified.
   User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -moz context. */
-  -moz-transition: all 1s ease-in-out;
-  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
-  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -o context. */
-  -o-transition: all 1s ease-in-out;
-  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -webkit context. */
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
-/* line 36, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idi {
+/* line 23, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idi {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 0s;
@@ -881,8 +850,8 @@ h1, h2 {
   transition-delay: 0s;
   color: yellow;
 }
-/* line 37, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idia {
+/* line 24, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idia {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 0.12s;
@@ -896,8 +865,8 @@ h1, h2 {
   transition-delay: 0.12s;
   color: green;
 }
-/* line 38, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idiaz {
+/* line 25, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idiaz {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 0.48s;
@@ -911,8 +880,8 @@ h1, h2 {
   transition-delay: 0.48s;
   color: red;
 }
-/* line 39, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idiaz_ro {
+/* line 26, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idiaz_ro {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 0.24s;
@@ -926,8 +895,8 @@ h1, h2 {
   transition-delay: 0.24s;
   color: brown;
 }
-/* line 40, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idiaz_ron {
+/* line 27, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idiaz_ron {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 0.36s;
@@ -941,8 +910,8 @@ h1, h2 {
   transition-delay: 0.36s;
   color: gray;
 }
-/* line 41, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idiaz_ronc {
+/* line 28, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idiaz_ronc {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 0.62s;
@@ -956,8 +925,8 @@ h1, h2 {
   transition-delay: 0.62s;
   color: wheat;
 }
-/* line 42, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idiaz_ronce {
+/* line 29, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idiaz_ronce {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 0.86s;
@@ -971,8 +940,8 @@ h1, h2 {
   transition-delay: 0.86s;
   color: lime;
 }
-/* line 43, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idiaz_roncer {
+/* line 30, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idiaz_roncer {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 0.74s;
@@ -986,8 +955,8 @@ h1, h2 {
   transition-delay: 0.74s;
   color: pink;
 }
-/* line 44, ../../_compass/modules/_idiazroncero.scss */
-.idr .idr-idiaz_roncero {
+/* line 31, ../../_compass/modules/_idiazroncero.scss */
+.idr:hover .idr-idiaz_roncero {
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition-delay: 1s;
@@ -1001,38 +970,41 @@ h1, h2 {
   transition-delay: 1s;
   color: purple;
 }
+/* line 34, ../../_compass/modules/_idiazroncero.scss */
+.idr .idr-idi, .idr .idr-idia, .idr .idr-idiaz, .idr .idr-idiaz_ro, .idr .idr-idiaz_ron, .idr .idr-idiaz_ronc, .idr .idr-idiaz_ronce, .idr .idr-idiaz_roncer, .idr .idr-idiaz_roncero {
+  max-width: 999px;
+  /* Content for ie 8.
+  Min version: unspecified.
+  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  color: #ccc;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: all 1s ease-in-out;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: all 1s ease-in-out;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
 
-/* line 48, ../../_compass/modules/_idiazroncero.scss */
+/* line 43, ../../_compass/modules/_idiazroncero.scss */
 .idr-motto {
-  font-size: 23px;
-  font-size: 1.15rem;
+  font-size: 25px;
+  font-size: 1.25rem;
   line-height: 30px;
   line-height: 1.5rem;
   font-family: "Calendas", Courier, Georgia, serif;
   font-weight: normal;
   display: block;
   color: #666;
-  max-height: 0;
-  /* Content for ie 8.
-  Min version: unspecified.
-  User threshold to keep: 0.1%. If ie 8 are omitted: 4.46163%. */
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -moz context. */
-  -moz-transition: all 1s ease-in-out 1s;
-  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
-  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -o context. */
-  -o-transition: all 1s ease-in-out 1s;
-  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -webkit context. */
-  -webkit-transition: all 1s ease-in-out;
-  -webkit-transition-delay: 1s;
-  transition: all 1s ease-in-out 1s;
 }
 
-/* line 59, ../../_compass/modules/_idiazroncero.scss */
+/* line 51, ../../_compass/modules/_idiazroncero.scss */
 .idr-separador {
   width: 100%;
   float: left;
@@ -1040,7 +1012,7 @@ h1, h2 {
   padding-right: 2.77778%;
   position: relative;
 }
-/* line 62, ../../_compass/modules/_idiazroncero.scss */
+/* line 54, ../../_compass/modules/_idiazroncero.scss */
 .idr-separador hr {
   position: absolute;
   margin: 0;
@@ -1061,13 +1033,13 @@ h1, h2 {
   border: none;
   border-bottom: 2px dotted #ccc;
 }
-/* line 72, ../../_compass/modules/_idiazroncero.scss */
+/* line 64, ../../_compass/modules/_idiazroncero.scss */
 .idr-separador span {
   padding-bottom: 5px;
-  font-size: 40px;
-  font-size: 2rem;
-  line-height: 45px;
-  line-height: 2.25rem;
+  font-size: 50px;
+  font-size: 2.5rem;
+  line-height: 60px;
+  line-height: 3rem;
   /* Capability transforms2d is prefixed with -moz because 0.77252% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transform: rotate(90deg);
@@ -1087,7 +1059,7 @@ h1, h2 {
 /* line 1, ../../_compass/modules/_social.scss */
 .social-bar {
   text-align: right;
-  border-bottom: 1px solid #999;
+  border-top: 5px solid #000;
 }
 /* line 4, ../../_compass/modules/_social.scss */
 .social-bar .fa {
@@ -1108,8 +1080,8 @@ h1, h2 {
 }
 /* line 16, ../../_compass/modules/_social.scss */
 .social-motto p {
-  font-size: 14px;
-  font-size: 0.7rem;
+  font-size: 13px;
+  font-size: 0.65rem;
   line-height: 30px;
   line-height: 1.5rem;
   color: #999;
@@ -1264,6 +1236,7 @@ footer:after {
 /* line 9, ../../_compass/modules/_home.scss */
 .post-list .post-item h2 {
   font-family: "Calendas", Courier, Georgia, serif;
+  font-weight: normal;
   margin: 0;
 }
 /* line 14, ../../_compass/modules/_home.scss */
@@ -1277,8 +1250,8 @@ footer:after {
 }
 /* line 23, ../../_compass/modules/_home.scss */
 .post-list .post-separador {
-  font-size: 27px;
-  font-size: 1.33rem;
+  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 45px;
   line-height: 2.25rem;
   color: #666;
@@ -1288,12 +1261,11 @@ footer:after {
   color: #fff;
   width: 100%;
   float: left;
-  margin-bottom: 1.5rem;
 }
 /* line 33, ../../_compass/modules/_home.scss */
 .post-list .post-item-1 h2 {
-  font-size: 33px;
-  font-size: 1.66rem;
+  font-size: 35px;
+  font-size: 1.75rem;
   line-height: 38px;
   line-height: 1.875rem;
 }
@@ -1304,36 +1276,40 @@ footer:after {
   line-height: 30px;
   line-height: 1.5rem;
 }
-/* line 40, ../../_compass/modules/_home.scss */
+/* line 39, ../../_compass/modules/_home.scss */
+.post-list .post-item-1 img {
+  display: block;
+}
+/* line 43, ../../_compass/modules/_home.scss */
 .post-list .post-item-2, .post-list .post-item-3 {
   width: 50%;
   float: left;
 }
-/* line 42, ../../_compass/modules/_home.scss */
+/* line 45, ../../_compass/modules/_home.scss */
 .post-list .post-item-2 h2, .post-list .post-item-3 h2 {
-  font-size: 23px;
-  font-size: 1.15rem;
-  line-height: 38px;
-  line-height: 1.875rem;
+  font-size: 25px;
+  font-size: 1.25rem;
+  line-height: 30px;
+  line-height: 1.5rem;
   font-style: italic;
 }
-/* line 46, ../../_compass/modules/_home.scss */
+/* line 49, ../../_compass/modules/_home.scss */
 .post-list .post-item-2 .post-fecha, .post-list .post-item-3 .post-fecha {
   font-size: 13px;
   font-size: 0.65rem;
   line-height: 30px;
   line-height: 1.5rem;
 }
-/* line 50, ../../_compass/modules/_home.scss */
+/* line 53, ../../_compass/modules/_home.scss */
 .post-list .post-item-2 {
   padding-right: 0.75rem;
   border-right: 1px solid #ddd;
 }
-/* line 54, ../../_compass/modules/_home.scss */
+/* line 57, ../../_compass/modules/_home.scss */
 .post-list .post-item-3 {
   padding-left: 0.75rem;
 }
-/* line 60, ../../_compass/modules/_home.scss */
+/* line 63, ../../_compass/modules/_home.scss */
 .post-list .post-item--image img {
   width: 100%;
   max-width: 100%;
@@ -1354,7 +1330,7 @@ footer:after {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 68, ../../_compass/modules/_home.scss */
+/* line 71, ../../_compass/modules/_home.scss */
 .post-list .post-item--image:hover img {
   /* Content for ie 8.
   Min version: unspecified.
@@ -1362,14 +1338,14 @@ footer:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 73, ../../_compass/modules/_home.scss */
+/* line 76, ../../_compass/modules/_home.scss */
 .post-list .post-item--image.post-item-1 .post-texto {
   position: absolute;
   right: 5%;
   top: 50%;
   width: 40%;
   padding: 0.75rem;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
   -moz-transition: all 1s ease-out;
@@ -1393,47 +1369,78 @@ footer:after {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 83, ../../_compass/modules/_home.scss */
+/* line 86, ../../_compass/modules/_home.scss */
 .post-list .post-item--image.post-item-1 h2 {
   font-style: italic;
   text-transform: lowercase;
 }
-/* line 89, ../../_compass/modules/_home.scss */
+/* line 92, ../../_compass/modules/_home.scss */
 .post-list .post-item--image.post-item-1:hover .post-texto {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   color: #000;
 }
-/* line 96, ../../_compass/modules/_home.scss */
+/* line 99, ../../_compass/modules/_home.scss */
 .post-list .post-item--image.post-item-2 img, .post-list .post-item--image.post-item-3 img {
   padding-bottom: 0.75rem;
   margin-bottom: 0.375rem;
   border-bottom: 1px dotted #ddd;
 }
-/* line 106, ../../_compass/modules/_home.scss */
+/* line 109, ../../_compass/modules/_home.scss */
 .post-list .post-item--plain.post-item-1 {
   padding: 0.75rem;
   background: #000;
 }
-/* line 109, ../../_compass/modules/_home.scss */
+/* line 112, ../../_compass/modules/_home.scss */
 .post-list .post-item--plain.post-item-1 h2 {
   max-width: 66%;
   margin: 0 auto;
 }
-/* line 147, ../../_compass/modules/_home.scss */
+/* line 150, ../../_compass/modules/_home.scss */
 .post-list .post-item--plain.post-item-2 .post-texto, .post-list .post-item--plain.post-item-3 .post-texto {
   padding: 0.75rem 0.375rem;
   border-top: 0.375rem solid #000;
 }
 
-/* line 1, ../../_compass/modules/_content.scss */
+/* line 159, ../../_compass/modules/_home.scss */
+.aviso {
+  font-style: italic;
+}
+/* line 161, ../../_compass/modules/_home.scss */
+.aviso i {
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  color: #999;
+}
+/* line 164, ../../_compass/modules/_home.scss */
+.aviso i:first-child {
+  margin-right: 50px;
+}
+/* line 167, ../../_compass/modules/_home.scss */
+.aviso i:last-child {
+  margin-left: 50px;
+  /* Capability transforms2d is prefixed with -moz because 0.77252% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transform: rotate(180deg);
+  /* Capability transforms2d is prefixed with -ms because 2.6001% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -ms context. */
+  -ms-transform: rotate(180deg);
+  /* Capability transforms2d is not prefixed with -o because 0.08196% of users are affected which is less than the threshold of 0.1. */
+  /* Capability transforms2d is prefixed with -webkit because 52.08628% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 2, ../../_compass/modules/_content.scss */
 .post-content {
   text-align: justify;
 }
-/* line 3, ../../_compass/modules/_content.scss */
+/* line 4, ../../_compass/modules/_content.scss */
 .post-content h2 {
-  text-align: center;
-  border-bottom: 1px dotted #ddd;
-  margin-top: 3rem;
+  border-bottom: 1px solid #999;
+  margin-top: 4.5rem;
 }
 /* line 8, ../../_compass/modules/_content.scss */
 .post-content p code {
@@ -1473,37 +1480,29 @@ footer:after {
   display: block;
   margin: 0 auto;
 }
-/* line 30, ../../_compass/modules/_content.scss */
-.post-content blockquote {
-  font-size: 18px;
-  font-size: 0.9rem;
-  line-height: 30px;
-  line-height: 1.5rem;
+
+/* line 33, ../../_compass/modules/_content.scss */
+.actualizado, .correccion {
+  background: #f7e0b2;
+  border-left: 6px solid #EFC164;
+  padding: 0.375rem;
+}
+/* line 37, ../../_compass/modules/_content.scss */
+.actualizado p, .correccion p {
   margin: 0;
-  padding: 0.75rem 1.5rem;
-  border-top: 0.75rem solid #d6d6d6;
-  background: #eee;
-}
-/* line 36, ../../_compass/modules/_content.scss */
-.post-content blockquote p:first-child {
-  margin-top: 0;
-}
-/* line 39, ../../_compass/modules/_content.scss */
-.post-content blockquote p:last-child {
-  margin-bottom: 0;
-}
-/* line 43, ../../_compass/modules/_content.scss */
-.post-content .actualizado {
   font-size: 13px;
   font-size: 0.65rem;
   line-height: 23px;
   line-height: 1.125rem;
-  text-align: center;
-  border-bottom: 1px solid #000;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 51, ../../_compass/modules/_content.scss */
+/* line 44, ../../_compass/modules/_content.scss */
+.actualizado-fecha {
+  font-weight: bold;
+}
+
+/* line 54, ../../_compass/modules/_content.scss */
 .footnotes {
   margin-top: 4.5rem;
   border-top: 1px solid #999;
@@ -1512,38 +1511,6 @@ footer:after {
   line-height: 30px;
   line-height: 1.5rem;
   color: #666;
-}
-
-/* line 58, ../../_compass/modules/_content.scss */
-.aviso {
-  font-style: italic;
-}
-/* line 60, ../../_compass/modules/_content.scss */
-.aviso i {
-  font-size: 16px;
-  font-size: 0.8rem;
-  line-height: 30px;
-  line-height: 1.5rem;
-  color: #999;
-}
-/* line 63, ../../_compass/modules/_content.scss */
-.aviso i:first-child {
-  margin-right: 50px;
-}
-/* line 66, ../../_compass/modules/_content.scss */
-.aviso i:last-child {
-  margin-left: 50px;
-  /* Capability transforms2d is prefixed with -moz because 0.77252% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -moz context. */
-  -moz-transform: rotate(180deg);
-  /* Capability transforms2d is prefixed with -ms because 2.6001% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -ms context. */
-  -ms-transform: rotate(180deg);
-  /* Capability transforms2d is not prefixed with -o because 0.08196% of users are affected which is less than the threshold of 0.1. */
-  /* Capability transforms2d is prefixed with -webkit because 52.08628% of users need it which is more than the threshold of 0.1%. */
-  /* Creating new -webkit context. */
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 /* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+actionscript+apacheconf+applescript+bash+c+csharp+cpp+coffeescript+css-extras+git+haml+http+java+latex+less+makefile+markdown+php+php-extras+python+rest+ruby+sass+scss+sql+stylus+swift+wiki+yaml&plugins=line-numbers+autolinker+show-language+highlight-keywords */
@@ -1750,6 +1717,339 @@ pre[class*='language-'][data-language]::before {
   border-radius: 0 0 0 5px;
   padding: 0 0.5em;
   text-shadow: none;
+}
+
+/* line 1, ../../_compass/modules/_twitter.scss */
+#twitter-fetcher {
+  width: 100%;
+  float: left;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is prefixed with -webkit because 9.47897% of users need it which is more than the threshold of 0.01%. */
+  /* Creating new -webkit context. */
+  display: -webkit-flex;
+  display: flex;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is prefixed with -webkit because 9.47897% of users need it which is more than the threshold of 0.01%. */
+  /* Creating new -webkit context. */
+  -webkit-align-items: center;
+  align-items: center;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.01. */
+  /* Capability flexbox is prefixed with -webkit because 9.47897% of users need it which is more than the threshold of 0.01%. */
+  /* Creating new -webkit context. */
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  border-top: 1px dotted #ddd;
+  border-bottom: 1px dotted #ddd;
+}
+/* line 9, ../../_compass/modules/_twitter.scss */
+#twitter-fetcher ul {
+  padding: 0;
+  margin: 0;
+}
+/* line 19, ../../_compass/modules/_twitter.scss */
+#twitter-fetcher ul li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+/* line 23, ../../_compass/modules/_twitter.scss */
+#twitter-fetcher ul li p {
+  margin: 0;
+  font-size: 16px;
+  font-size: 0.8rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  overflow: hidden;
+}
+
+/* line 32, ../../_compass/modules/_twitter.scss */
+.twitter-ul-wrapper {
+  width: 75%;
+}
+
+/* line 40, ../../_compass/modules/_twitter.scss */
+.twitter-header {
+  width: 10%;
+}
+/* line 43, ../../_compass/modules/_twitter.scss */
+.twitter-header a {
+  font-size: 50px;
+  font-size: 2.5rem;
+  line-height: 60px;
+  line-height: 3rem;
+  color: #286275;
+}
+/* line 46, ../../_compass/modules/_twitter.scss */
+.twitter-header a:link {
+  color: #286275;
+}
+
+/* line 53, ../../_compass/modules/_twitter.scss */
+.twitter-open {
+  width: 7.5%;
+}
+
+/* line 57, ../../_compass/modules/_twitter.scss */
+.twitter-close {
+  width: 7.5%;
+}
+
+/* line 61, ../../_compass/modules/_twitter.scss */
+.twitter-open, .twitter-close {
+  font-size: 100px;
+  font-size: 5rem;
+  line-height: 150px;
+  line-height: 7.5rem;
+  color: #ddd;
+  margin-top: -0.45rem;
+  position: relative;
+  /* Capability css-transitions is prefixed with -moz because 0.60801% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
+  -moz-transition: color 0.25s ease-in-out;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.10183% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
+  -o-transition: color 0.25s ease-in-out;
+  /* Capability css-transitions is prefixed with -webkit because 9.62358% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+/* line 67, ../../_compass/modules/_twitter.scss */
+.twitter-open:hover, .twitter-open.hover, .twitter-close:hover, .twitter-close.hover {
+  color: #00434C;
+}
+/* line 70, ../../_compass/modules/_twitter.scss */
+.twitter-open a, .twitter-close a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 79, ../../_compass/modules/_twitter.scss */
+.twitter-reply, .twitter-fav, .twitter-retweet {
+  margin: 0 1.5rem;
+}
+
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+/** RESET AND LAYOUT
+===================================*/
+/* line 17, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  *zoom: 1;
+}
+
+/* line 24, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+/** THEME
+===================================*/
+/* line 32, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  transform: translatez(0);
+}
+
+/* line 42, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+/* LOADER */
+/* line 51, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url(images/bx_loader.gif) center center no-repeat #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+/* PAGER */
+/* line 64, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+
+/* line 73, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 80, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 93, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+/* line 100, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url(images/controls.png) no-repeat 0 -32px;
+}
+
+/* line 105, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url(images/controls.png) no-repeat -43px -32px;
+}
+
+/* line 110, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-prev:hover {
+  background-position: 0 0;
+}
+
+/* line 114, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-next:hover {
+  background-position: -43px 0;
+}
+
+/* line 118, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+/* line 129, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+/* line 135, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+/* line 139, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(images/controls.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 149, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+  background-position: -86px 0;
+}
+
+/* line 154, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(images/controls.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 164, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+  background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+/* line 171, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+/* line 176, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+/* line 183, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666 \9;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+/* line 192, ../../_compass/modules/_bxslider.scss */
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
 }
 
 /* line 1, ../../_compass/external/_syntax.scss */

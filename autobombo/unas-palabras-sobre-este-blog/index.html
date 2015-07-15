@@ -69,8 +69,10 @@
   <link rel="alternate" type="application/rss+xml" title="idiazroncero" href="http://idiazroncero.com/feed.xml" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="/js/script.js"></script>
   <script src="/js/prism.js"></script>
+  <script src="/js/twitterfetcher.min.js"></script>
+  <script src="/js/jquery.bxslider.min.js"></script>
+  <script src="/js/script.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -91,12 +93,15 @@
       <header class="header">
 	<div class="social-bar">
 		<div class="social-motto">
-			<p>idiazroncero.com | <span id="social-log">versión 0.4.1</span></p>
+			<p>idiazroncero.com | <span id="social-log">beta 0.5</span></p>
 			<div class="social-motto-log">
 				<p>¡estamos en beta!</p>
 				<p>Últimos cambios:</p>
 				<ul>
-					<li>RSS Feeds</li>
+					<li>Rediseño de header</li>
+					<li>Formato de fecha</li>
+					<li>Nueva seccion "actualizado" en posts</li>
+					<li>Twitter</li>
 				</ul>
 			</div>
 		</div>
@@ -165,7 +170,7 @@
 
   <header class="post-header">
     <h1 class="post-title">Unas palabras sobre idiaz.roncero</h1>
-    <p class="post-meta">Jun 24, 2015
+    <p class="post-meta">24 Jun 2015
 	 
 		• 
 		
@@ -179,6 +184,10 @@
   </header>
 
   <article class="post-content">
+    <aside class="actualizado">
+      <strong>Fe de errores</strong>
+        <p><span class="actualizado-fecha"> · </span></p>
+    </aside>
     <p>Si escribir unas líneas de presentación siempre es complicado, esto es aún más cierto cuando la persona detrás del teclado es más bien enemiga de los focos.</p>
 
 <p>El caso es que un blog personal, mal que me pese, está ligado necesariamente a <em>alguien</em> que afirma hacer <em>algo</em> y que, en este fuego de vanidades que es internet, tiene la osadía de considerar ese <em>algo</em> como digno del tiempo de los demás.</p>

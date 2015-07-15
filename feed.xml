@@ -6,15 +6,13 @@
 </description>
     <link>http://idiazroncero.com/</link>
     <atom:link href="http://idiazroncero.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Jul 2015 00:28:21 +0200</pubDate>
-    <lastBuildDate>Tue, 14 Jul 2015 00:28:21 +0200</lastBuildDate>
+    <pubDate>Wed, 15 Jul 2015 17:09:54 +0200</pubDate>
+    <lastBuildDate>Wed, 15 Jul 2015 17:09:54 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Ligaduras en tipografía web (actualizado)</title>
-        <description>&lt;div class=&quot;actualizado&quot;&gt;&lt;a href=&quot;#correccion&quot;&gt;Actualizado el Domingo 12 de Julio a las 18:26 horas&lt;/a&gt;&lt;br /&gt;Motivo: el error con las ligaduras comentado se debía al modo automático de FontSquirrell&lt;/div&gt;
-
-&lt;p&gt;A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.&lt;/p&gt;
+        <description>&lt;p&gt;A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.&lt;/p&gt;
 
 &lt;p&gt;Una ligadura es la unión de dos o más grafemas (letras, símbolos). Generalmente, estos dos grafemas por separado tienden a colisionar: por ejemplo, la unión de la letra efe y la i en ciertas tipografías puede provocar que el punto de la i “choque” con la parte superior de la efe.&lt;/p&gt;
 
@@ -67,7 +65,7 @@
 &lt;p&gt;Por ejemplo, en Calendas Plus la ligatura &lt;strong&gt;Œ&lt;/strong&gt; - que no se activa al escribir “OE” - corresponde al carácter Unicode &lt;code&gt;U+0152&lt;/code&gt;. Según &lt;a href=&quot;http://unicode-table.com/es/0152/&quot;&gt;Unicode Table&lt;/a&gt;, su entidad HTML es &lt;code&gt;&amp;amp;#338;&lt;/code&gt; o &lt;code&gt;&amp;amp;OElig;&lt;/code&gt;. Escribimos:&lt;/p&gt;
 
 &lt;div&gt;
-  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;p&amp;gt;&amp;amp;#338;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-markup&quot;&gt;&amp;lt;p&amp;gt;&amp;amp;#338;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Y obtenemos:&lt;/p&gt;
@@ -86,17 +84,12 @@
 
 &lt;p&gt;Para usarla en esta web, la pasé por el conocido &lt;a href=&quot;http://www.fontsquirrel.com/tools/webfont-generator&quot;&gt;Webfont Kit Generator de FontSquirrell&lt;/a&gt;. &lt;del&gt;En algún punto, desconozco por qué, ligaduras como la que une la ese con la te dejaron de funcionar, pese a ser ligaduras “oficiales” con su entidad HTML bien asentada y su UNICODE asignado.&lt;/del&gt;&lt;/p&gt;
 
-&lt;div id=&quot;correccion&quot;&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;CORRECCIÓN&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;Para acceder a todas las ligaduras de la fuente tal y como definidas en su formato OpenType hay que usar el generador avanzado de FontSquirrell y hacerse un sub-setting manual.&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;El proceso de escribir este post me hizo investigar un poco más y no ha sido difícil resolverlo. Mi error fue usar el modo automático de FontSquirrell. Es por eso que los siguientes párrafos han quedado obsoletos y este blog ya dispone de todas las ligaduras definidas en la tipografía.&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;Pronto escribiré una entrada explicando cómo conseguirlo.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;correccion&quot;&gt;
+	&lt;strong&gt;Corrección:&lt;/strong&gt;
+    &lt;p&gt;
+    	En realidad, para acceder a todas las ligaduras de la fuente tal y como definidas en su formato OpenType hay que usar el generador avanzado de FontSquirrell y hacer un sub-setting manual.
+    &lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Lo cual nos lleva a otra pequeña frustración: Calendas Plus viene con una tonelada de ligaduras increíbles que muestran en su &lt;a href=&quot;http://www.calendasplus.com&quot;&gt;página web&lt;/a&gt;:&lt;/p&gt;
 

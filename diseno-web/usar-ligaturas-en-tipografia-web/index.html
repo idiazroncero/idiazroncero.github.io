@@ -8,7 +8,7 @@
 
   <title>Ligaduras en tipografía web (actualizado)</title>
 
-  <meta name="description" content="Actualizado el Domingo 12 de Julio a las 18:26 horasMotivo: el error con las ligaduras comentado se debía al modo automático de FontSquirrell">
+  <meta name="description" content="A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.">
   <!-- METATAGS DE FACEBOOK -->
 
 <meta content="idiazroncero" property="og:site_name">
@@ -19,7 +19,7 @@
   <meta content="article" property="og:type">
 
 
-  <meta content="Actualizado el Domingo 12 de Julio a las 18:26 horasMotivo: el error con las ligaduras comentado se debía al modo automático de FontSquirrell" property="og:description">
+  <meta content="A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas." property="og:description">
 
 
   <meta content="http://idiazroncero.com/diseno-web/usar-ligaturas-en-tipografia-web/" property="og:url">
@@ -60,7 +60,7 @@
 
 
 
-  <meta content="Actualizado el Domingo 12 de Julio a las 18:26 horasMotivo: el error con las ligaduras comentado se debía al modo automático de FontSquirrell" name="twitter:description">
+  <meta content="A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas." name="twitter:description">
 
 
 
@@ -75,8 +75,10 @@
   <link rel="alternate" type="application/rss+xml" title="idiazroncero" href="http://idiazroncero.com/feed.xml" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="/js/script.js"></script>
   <script src="/js/prism.js"></script>
+  <script src="/js/twitterfetcher.min.js"></script>
+  <script src="/js/jquery.bxslider.min.js"></script>
+  <script src="/js/script.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -97,12 +99,15 @@
       <header class="header">
 	<div class="social-bar">
 		<div class="social-motto">
-			<p>idiazroncero.com | <span id="social-log">versión 0.4.1</span></p>
+			<p>idiazroncero.com | <span id="social-log">beta 0.5</span></p>
 			<div class="social-motto-log">
 				<p>¡estamos en beta!</p>
 				<p>Últimos cambios:</p>
 				<ul>
-					<li>RSS Feeds</li>
+					<li>Rediseño de header</li>
+					<li>Formato de fecha</li>
+					<li>Nueva seccion "actualizado" en posts</li>
+					<li>Twitter</li>
 				</ul>
 			</div>
 		</div>
@@ -171,7 +176,7 @@
 
   <header class="post-header">
     <h1 class="post-title">Ligaduras en tipografía web (actualizado)</h1>
-    <p class="post-meta">Jul 11, 2015
+    <p class="post-meta">11 Jul 2015
 	 
 		• 
 		
@@ -185,9 +190,11 @@
   </header>
 
   <article class="post-content">
-    <div class="actualizado"><a href="#correccion">Actualizado el Domingo 12 de Julio a las 18:26 horas</a><br />Motivo: el error con las ligaduras comentado se debía al modo automático de FontSquirrell</div>
-
-<p>A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.</p>
+    <aside class="actualizado">
+      <strong>Fe de errores</strong>
+        <p><span class="actualizado-fecha">13 Jul 2015 · </span>En la entrada original se daba cuenta de un error en las ligaduras achacado al conversor de Font Squirrell. En realidad hay que usar el conversor avanzado para acceder a todos los sub-sets de la fuente.</p>
+    </aside>
+    <p>A la hora de enfocar este sitio web, una de las cuestiones con las que quise experimentar son las ligaduras tipográficas.</p>
 
 <p>Una ligadura es la unión de dos o más grafemas (letras, símbolos). Generalmente, estos dos grafemas por separado tienden a colisionar: por ejemplo, la unión de la letra efe y la i en ciertas tipografías puede provocar que el punto de la i “choque” con la parte superior de la efe.</p>
 
@@ -240,7 +247,7 @@
 <p>Por ejemplo, en Calendas Plus la ligatura <strong>Œ</strong> - que no se activa al escribir “OE” - corresponde al carácter Unicode <code>U+0152</code>. Según <a href="http://unicode-table.com/es/0152/">Unicode Table</a>, su entidad HTML es <code>&amp;#338;</code> o <code>&amp;OElig;</code>. Escribimos:</p>
 
 <div>
-  <pre data-line=""><code class="language-html">&lt;p&gt;&amp;#338;&lt;/p&gt;</code></pre>
+  <pre data-line=""><code class="language-markup">&lt;p&gt;&amp;#338;&lt;/p&gt;</code></pre>
 </div>
 
 <p>Y obtenemos:</p>
@@ -259,17 +266,12 @@
 
 <p>Para usarla en esta web, la pasé por el conocido <a href="http://www.fontsquirrel.com/tools/webfont-generator">Webfont Kit Generator de FontSquirrell</a>. <del>En algún punto, desconozco por qué, ligaduras como la que une la ese con la te dejaron de funcionar, pese a ser ligaduras “oficiales” con su entidad HTML bien asentada y su UNICODE asignado.</del></p>
 
-<div id="correccion"></div>
-
-<blockquote>
-  <p><strong>CORRECCIÓN</strong></p>
-
-  <p><em>Para acceder a todas las ligaduras de la fuente tal y como definidas en su formato OpenType hay que usar el generador avanzado de FontSquirrell y hacerse un sub-setting manual.</em></p>
-
-  <p><em>El proceso de escribir este post me hizo investigar un poco más y no ha sido difícil resolverlo. Mi error fue usar el modo automático de FontSquirrell. Es por eso que los siguientes párrafos han quedado obsoletos y este blog ya dispone de todas las ligaduras definidas en la tipografía.</em></p>
-
-  <p><em>Pronto escribiré una entrada explicando cómo conseguirlo.</em></p>
-</blockquote>
+<div class="correccion">
+	<strong>Corrección:</strong>
+    <p>
+    	En realidad, para acceder a todas las ligaduras de la fuente tal y como definidas en su formato OpenType hay que usar el generador avanzado de FontSquirrell y hacer un sub-setting manual.
+    </p>
+</div>
 
 <p>Lo cual nos lleva a otra pequeña frustración: Calendas Plus viene con una tonelada de ligaduras increíbles que muestran en su <a href="http://www.calendasplus.com">página web</a>:</p>
 

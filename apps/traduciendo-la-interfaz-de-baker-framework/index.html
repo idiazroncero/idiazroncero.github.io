@@ -77,8 +77,10 @@
   <link rel="alternate" type="application/rss+xml" title="idiazroncero" href="http://idiazroncero.com/feed.xml" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="/js/script.js"></script>
   <script src="/js/prism.js"></script>
+  <script src="/js/twitterfetcher.min.js"></script>
+  <script src="/js/jquery.bxslider.min.js"></script>
+  <script src="/js/script.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -99,12 +101,15 @@
       <header class="header">
 	<div class="social-bar">
 		<div class="social-motto">
-			<p>idiazroncero.com | <span id="social-log">versión 0.4.1</span></p>
+			<p>idiazroncero.com | <span id="social-log">beta 0.5</span></p>
 			<div class="social-motto-log">
 				<p>¡estamos en beta!</p>
 				<p>Últimos cambios:</p>
 				<ul>
-					<li>RSS Feeds</li>
+					<li>Rediseño de header</li>
+					<li>Formato de fecha</li>
+					<li>Nueva seccion "actualizado" en posts</li>
+					<li>Twitter</li>
 				</ul>
 			</div>
 		</div>
@@ -173,7 +178,7 @@
 
   <header class="post-header">
     <h1 class="post-title">Traduciendo la interfaz de Baker Framework</h1>
-    <p class="post-meta">Jun 29, 2015
+    <p class="post-meta">29 Jun 2015
 	 
 		• 
 		
@@ -187,6 +192,10 @@
   </header>
 
   <article class="post-content">
+    <aside class="actualizado">
+      <strong>Fe de errores</strong>
+        <p><span class="actualizado-fecha"> · </span></p>
+    </aside>
     <h2 id="qu-es-baker-framework">Qué es Baker Framework</h2>
 
 <p><a href="http://www.bakerframework.com/">Baker</a> es un excelente entorno de trabajo (framework) dedicado a la publicación de contenidos digitales en iPad y iPhone.</p>
