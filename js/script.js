@@ -7,10 +7,10 @@ $(function(){
 		$('.social-motto-log').hide();
 
 		// Muestra y oculta el changelog
-		$('#social-log').on('mouseenter', function(){
-			$('.social-motto-log').fadeIn(200);
+		$('#version-num').on('mouseenter', function(){
+			$('.version-log').fadeIn(200);
 		}).on('mouseleave', function(){
-			$('.social-motto-log').fadeOut(200);
+			$('.version-log').fadeOut(200);
 		})
 
 		// Twitter Fetcher: último tweet
@@ -28,11 +28,11 @@ $(function(){
 
 		twitterFetcher.fetch(config1);
 
-		$(document).on('mouseenter', '.twitter-close, .twitter-open', function(){
-			$(this).addClass('hover');
-		}).on('mouseleave', '.twitter-close, .twitter-open', function(){
-			$(this).removeClass('hover');
-		});
+		// $(document).on('mouseenter', '.twitter-close, .twitter-open', function(){
+		// 	$(this).addClass('hover');
+		// }).on('mouseleave', '.twitter-close, .twitter-open', function(){
+		// 	$(this).removeClass('hover');
+		// });
 
         // setTimeout(function(){
         // 	console.log('ahora');
