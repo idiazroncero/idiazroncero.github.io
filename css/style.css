@@ -1453,14 +1453,18 @@ footer:after {
   display: block;
   margin: 0 auto;
 }
+/* line 75, ../../_compass/modules/_content.scss */
+.post-content .twitter-tweet {
+  margin: 0 auto !important;
+}
 
-/* line 80, ../../_compass/modules/_content.scss */
+/* line 83, ../../_compass/modules/_content.scss */
 .actualizado, .correccion {
   background: #f7e0b2;
   border-left: 6px solid #EFC164;
   padding: 0.375rem;
 }
-/* line 84, ../../_compass/modules/_content.scss */
+/* line 87, ../../_compass/modules/_content.scss */
 .actualizado p, .correccion p {
   margin: 0;
   font-size: 13px;
@@ -1470,12 +1474,12 @@ footer:after {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 91, ../../_compass/modules/_content.scss */
+/* line 94, ../../_compass/modules/_content.scss */
 .actualizado-fecha {
   font-weight: bold;
 }
 
-/* line 101, ../../_compass/modules/_content.scss */
+/* line 104, ../../_compass/modules/_content.scss */
 .footnotes {
   margin-top: 4.5rem;
   border-top: 1px solid #999;
@@ -2046,18 +2050,18 @@ pre[class*='language-'][data-language]::before {
   padding: 0px 0px 2px 0px;
 }
 
-/* line 14, ../../_compass/modules/_mainmenu.scss */
+/* line 13, ../../_compass/modules/_mainmenu.scss */
 .mainmenu-secciones {
   margin: 0;
   padding: 0;
 }
-/* line 17, ../../_compass/modules/_mainmenu.scss */
+/* line 16, ../../_compass/modules/_mainmenu.scss */
 .mainmenu-secciones li {
   display: inline-block;
   padding: 0 0.75rem;
   font-weight: bold;
 }
-/* line 21, ../../_compass/modules/_mainmenu.scss */
+/* line 20, ../../_compass/modules/_mainmenu.scss */
 .mainmenu-secciones li:hover {
   background: #000;
 }
@@ -2076,7 +2080,7 @@ pre[class*='language-'][data-language]::before {
   color: #eee;
   text-decoration: none;
 }
-/* line 25, ../../_compass/modules/_mainmenu.scss */
+/* line 24, ../../_compass/modules/_mainmenu.scss */
 .mainmenu-secciones li a {
   font-size: 16px;
   font-size: 0.8rem;

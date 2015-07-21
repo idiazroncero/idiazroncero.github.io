@@ -6,9 +6,154 @@
 </description>
     <link>http://idiazroncero.com/</link>
     <atom:link href="http://idiazroncero.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jul 2015 19:14:15 +0200</pubDate>
-    <lastBuildDate>Mon, 20 Jul 2015 19:14:15 +0200</lastBuildDate>
+    <pubDate>Tue, 21 Jul 2015 12:25:47 +0200</pubDate>
+    <lastBuildDate>Tue, 21 Jul 2015 12:25:47 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>¡Muerte al clearfix! Flexbox y los pseudo-elementos CSS</title>
+        <description>&lt;p&gt;Ayer, mientras trabajaba en &lt;a href=&quot;https://github.com/idiazroncero/idiazroncero.github.io/commit/7ea365bd972fff99e2a5436e6084ef4ee3816a2e&quot;&gt;la última versión de esta página&lt;/a&gt;, me encontré con uno de esos molestos momentos &lt;em&gt;pero-qué-coj&lt;/em&gt;&lt;em&gt;****-está-pasando&lt;/em&gt; que tanto ayudan a progresar en los escarpados senderos del CSS.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-cards=&quot;hidden&quot; lang=&quot;es&quot;&gt;&lt;p lang=&quot;es&quot; dir=&quot;ltr&quot;&gt;Tras un rato de romperme la cabeza, descubro que los pseudo-elementos CSS AFECTAN al flexbox. Pronto lo cuento en &lt;a href=&quot;http://t.co/Xc9UquotU9&quot;&gt;http://t.co/Xc9UquotU9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ignacio Díaz-Roncero (@idiazroncero) &lt;a href=&quot;https://twitter.com/idiazroncero/status/623096651251625984&quot;&gt;julio 20, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;el-diseo&quot;&gt;El diseño&lt;/h2&gt;
+
+&lt;p&gt;El nuevo menú de idiazroncero.com está basado en tres bloques: el &lt;code&gt;div&lt;/code&gt; de la izquierda contiene la versión actual de la web, el de la derecha las redes sociales y RSS y en el centro un &lt;code&gt;ul&lt;/code&gt; contiene el menú de categorías.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/flexbox01.png&quot; alt=&quot;El diseño del menu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para distribuir los tres elementos a lo ancho de su contenedor decidí optar por &lt;code&gt;flexbox&lt;/code&gt;. El modelo de display &lt;code&gt;flex&lt;/code&gt; es algo así como el mesías del CSS: anunciado desde hace años como la panacea de todos nuestros males, desde hace unos meses se considera ya maduro como para ser utilizado en navegadores modernos.&lt;/p&gt;
+
+&lt;p&gt;Para entender el por qué de tanta expectación, basta escuchar algunos gritos de la religión `flex:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;¡Muerte al float! ¡Larga vida al flex!&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;¡Viva el centrado vertical! ¡Muerte al display:table-cell o al transform:translate(-50% -50%)!¡No mas position:absolute innecesario! ¡Viva el flex!&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;¡Muerte al clearfix! ¡Larga vida al flex!&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;¡No sé cuál es el height ni me importa! ¡Dame cualquier width! ¡Eres mi señor, oh flex!&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Algún día desarrollaré todo esto con más detalle)&lt;/p&gt;
+
+&lt;p&gt;En resumen: el modelo de caja &lt;code&gt;flex&lt;/code&gt; permite solucionar la mayoría de problemas de posicionamiento y distibución de elementos, particularmente en ausencia de valores conocidos de alto y ancho.&lt;/p&gt;
+
+&lt;p&gt;Es por ello que decidí lanzarme a por la sintaxis &lt;code&gt;flex&lt;/code&gt; y ordenar al contenedor de mi menú que distribuyese horizontalmente las tres cajas maximizando automáticamente el espacio entre ellas y provocando una alineacion perfecta izquierda-derecha-centro&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-scss&quot;&gt;.mainmenu {
+	@include display-flex();
+	@include justify-content(space-between);
+	border-top:1px solid $gris-medio;
+	border-bottom:1px solid $gris-medio;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;el-momento-waddafack&quot;&gt;El momento waddafack?&lt;/h2&gt;
+
+&lt;p&gt;¿Pero qué coj&lt;em&gt;**&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/flexbox02.png&quot; alt=&quot;Algo no va bien&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;¿De dónde sale ese espacio a la derecha?&lt;/p&gt;
+
+&lt;p&gt;Repasemos el tutorial &lt;a href=&quot;http://flexboxin5.com/&quot;&gt;flexbox in five minutes&lt;/a&gt;. Caramba, aquí sí que sale bien.&lt;/p&gt;
+
+&lt;p&gt;Dado un &lt;code&gt;div&lt;/code&gt; con &lt;code&gt;display:flex&lt;/code&gt; que contiene tres elementos, dichos elementos pueden tener un valor explícito de alto y ancho o, como es mi caso, fluir y depender de su contenido.&lt;/p&gt;
+
+&lt;p&gt;Si se da un valor &lt;code&gt;justify-content: space-between&lt;/code&gt;, la caja se encarga automáticamente de distribuir los tres elementos equitativamente en el plano horizontal:&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;a href=&quot;/images/flex-example1.png&quot;&gt;
+		&lt;img src=&quot;/images/flex-example1.png&quot; alt=&quot;Valores de justify-content.Fuente: http://www.ideago.co/&quot; /&gt;
+	&lt;/a&gt;
+&lt;figcaption&gt;
+    Valores de justify-content.Fuente: http://www.ideago.co/
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Es decir: en mi caso, “beta” está en su sitio, pero el &lt;code&gt;ul&lt;/code&gt; y los iconos no.&lt;/p&gt;
+
+&lt;p&gt;Y no, no me he dejado ningún elemento html suelto.&lt;/p&gt;
+
+&lt;p&gt;Una pena. Yo que estaba pensando en lo genial que es esto del &lt;code&gt;flex&lt;/code&gt;. Fíjate que para conseguir esto mismo con &lt;code&gt;floats&lt;/code&gt;, hubiera tenido que dar valores explícitos de ancho a cada elemento de modo que entre los tres sumaran el 100% del ancho. Y luego hubiera tenido que alinear el texto de uno a la izquierda, el otro al centro y el último a la derecha.&lt;/p&gt;
+
+&lt;p&gt;Y encima, el elemento contenedor habría perdido toda su altura al estar todos sus hijos flotados y tendría que haber añadido un &lt;code&gt;clearfix&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Copón.&lt;/p&gt;
+
+&lt;p&gt;¡El &lt;code&gt;clearfix&lt;/code&gt;! ¡Me lo había dejado encendido!&lt;/p&gt;
+
+&lt;h2 id=&quot;los-pseudo-elementos-no-son-tan-pseudo&quot;&gt;Los pseudo-elementos no son tan pseudo&lt;/h2&gt;
+
+&lt;p&gt;Puesto que mi primera opción fue usar floats, mi SCSS incluía un clearfix de Compass que utiliza la técnica de añadir un pseudo-elemento:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-scss&quot;&gt;.mainmenu {
+	@include pie-clearfix();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;El pseudo-elemento añadido es el siguiente:&lt;/p&gt;
+
+&lt;div&gt;
+  &lt;pre data-line=&quot;&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;.mainmenu:after {
+  content: &amp;quot;&amp;quot;;
+  display: table;
+  clear: both;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Inspecciono el código y lo encuentro:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/flexbox03.png&quot; alt=&quot;El pseudo-elemento del horror&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Este pseudo-elemento &lt;strong&gt;estaba siendo considerado por parte del &lt;code&gt;flexbox&lt;/code&gt; como un elemento de pleno derecho&lt;/strong&gt;, de modo que la caja estaba siendo &lt;em&gt;correctamente&lt;/em&gt; dividida en cuatro porciones, no en tres.&lt;/p&gt;
+
+&lt;p&gt;A ojos de &lt;code&gt;flex&lt;/code&gt;, no hay nada &lt;em&gt;pseudo&lt;/em&gt; en un &lt;code&gt;:after&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Como el pseudo-elemento no tiene &lt;code&gt;content&lt;/code&gt; alguno, ni color, el resultado era un hueco en blanco.&lt;/p&gt;
+
+&lt;p&gt;Eliminado el innecesario clearfix, el menú vuelve a la normalidad y los tres bloques se distribuyen correctamente a lo ancho de su elemento padre.&lt;/p&gt;
+
+&lt;p&gt;Una vez más, la justicia CSS triunfa sobre el mal.&lt;/p&gt;
+
+&lt;p&gt;Y todo ello, gracias al &lt;code&gt;flexbox&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;¡Muerte al clearfix!&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Nótese que uso &lt;code&gt;@mixins&lt;/code&gt; de Compass. Esto se debe a que la sintaxis de &lt;code&gt;flexbox&lt;/code&gt; ha pasado por varias versiones, y muchos navegadores utilizan todavía todas o algunos propiedades deprecadas. Estos &lt;code&gt;@mixins&lt;/code&gt; ayudan a proporcionar alternativas (fallbacks) para dichos navegadores. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 21 Jul 2015 02:00:00 +0200</pubDate>
+        <link>http://idiazroncero.com/diseno-web/clearfix-flexbox-y-pseudoelementos/</link>
+        <guid isPermaLink="true">http://idiazroncero.com/diseno-web/clearfix-flexbox-y-pseudoelementos/</guid>
+        
+        <category>flexbox</category>
+        
+        <category>css</category>
+        
+        <category>sass</category>
+        
+        <category>compass</category>
+        
+        
+        <category>diseno-web</category>
+        
+      </item>
     
       <item>
         <title>Ligaduras en tipografía web (actualizado)</title>
