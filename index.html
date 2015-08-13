@@ -88,26 +88,16 @@
 	<div class="idr" >
 		<h1>
 			<a href="/">
-				<span class="idr-i">i</span><span class="idr-id">
-				d</span><span class="idr-idi">i</span><span class="idr-idia">
-				a</span><span class="idr-idiaz">
-				z</span><span class="idr-idiaz_">
-				.</span><span class="idr-idiaz_r">
-				r</span><span class="idr-idiaz_ro">
-				o</span><span class="idr-idiaz_ron">
-				n</span><span class="idr-idiaz_ronc">
-				c</span><span class="idr-idiaz_ronce">
-				e</span><span class="idr-idiaz_roncer">
-				r</span><span class="idr-idiaz_roncero">
-				o</span>
+				<span class="idr-i">i</span><span class="idr-id">d</span><span class="idr-idi">i</span><span class="idr-idia">a</span><span class="idr-idiaz">z</span><span class="idr-idiaz_">.</span><span class="idr-idiaz_r">r</span><span class="idr-idiaz_ro">o</span><span class="idr-idiaz_ron">n</span><span class="idr-idiaz_ronc">c</span><span class="idr-idiaz_ronce">e</span><span class="idr-idiaz_roncer">r</span><span class="idr-idiaz_roncero">o</span>
 			</a>
 		</h1>
 		<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
 	</div>
 
 	<nav class="mainmenu">
+		<h1 class="esconder">Menú principal</h1>
 		<div class="version">
-			<p id="version-num">beta 0.6</p>
+			<p id="version-num">beta 0.7</p>
 <!-- 			<div class="version-log">
 				<p>¡estamos en beta!</p>
 				<p>Últimos cambios:</p>
@@ -124,30 +114,64 @@
 			
 				 
 				<li><a href="/autobombo">
+
+
 	
-		autobombo
+
 	
+
+
+
+	autobombo
+
+
 </a></li>
 			
 				 
 				<li><a href="/apps">
+
+
 	
-		apps
+
 	
+
+
+
+	apps
+
+
 </a></li>
 			
 				 
 				<li><a href="/diseno-web">
+
+
 	
 		diseño web
+		
 	
+
+	
+
+
+
+
 </a></li>
 			
 				 
 				<li><a href="/politica">
+
+
 	
-		politica
+
 	
+		política
+		
+	
+
+
+
+
 </a></li>
 			
 		</ul>
@@ -167,36 +191,38 @@
 </header>
       <div class="idr-separador"><hr/><span>{</span></div>
       <div class="content">
-        <div class="content-wrapper">
-          <div class="home">
-
-<!--   <h1 class="page-heading">Entradas</h1> -->
-<!--   <p class="aviso"><i class="fa fa-gears"></i>Estamos en construcción. Disculpen las chapucillas<i class="fa fa-gears"></i></p> -->
-  <ul class="post-list">
-    <!-- PRIMER POST -->
+        <section class="main-post">
+  <h1 class="esconder">Última entrada</h1>
+  <!-- PRIMER POST -->
+  
     
-      
-        <li class="post-item post-item-1 post-item--image">
-          <img src="images/emprendedor.jpg" alt="" />
-          <div class="post-texto">
-            <div class="post-texto-inner">
-              <h2>La burbuja del emprendimiento: reflexiones de un cenizo</h2>
-              
-                <div class="post-separador">~</div>
-              
-              <div class="post-fecha">31 Jul, 2015</div>
-            </div>
+      <article class="post-item post-item-1 post-item--image">
+        <img src="/images/emprendedor.jpg" alt="" />
+        <div class="post-texto">
+          <div class="post-texto-inner">
+            <h2>La burbuja del emprendimiento: reflexiones de un cenizo</h2>
+            
+              <div class="post-separador">~</div>
+            
+            <div class="post-fecha">31 Jul, 2015</div>
           </div>
-          <a class="post-link" href="/politica/reflexiones-sobre-emprendimiento/"></a>
-        </li>
-      
+        </div>
+        <a class="post-link" href="/politica/reflexiones-sobre-emprendimiento/"></a>
+      </article>
     
-    <!-- TWITTER -->
-    <div id="twitter-fetcher"></div>
-    <!-- LOS DOS SIGUIENTES -->
+  
+</section>
+<!-- TWITTER -->
+<section class="twitter">
+  <h1 class="esconder">Últimos tweets</h1>
+  <div id="twitter-fetcher"></div>
+</section>
+<!-- LOS DOS SIGUIENTES -->
+<section class="next-posts">
+  <h1 class="esconder">Entradas recientes</h1>
     
       
-        <li class="post-item post-item-2 post-item--plain">
+        <article class="post-item post-item-2 post-item--plain">
           <div class="post-texto">
             <div class="post-texto-inner">
               <h2>¡Muerte al clearfix! Flexbox y los pseudo-elementos CSS</h2>
@@ -207,11 +233,11 @@
             </div>
           </div>
           <a class="post-link" href="/diseno-web/clearfix-flexbox-y-pseudoelementos/"></a> 
-        </li>
+        </article>
       
     
       
-        <li class="post-item post-item-3 post-item--plain">
+        <article class="post-item post-item-3 post-item--plain">
           <div class="post-texto">
             <div class="post-texto-inner">
               <h2>Ligaduras en tipografía web (actualizado)</h2>
@@ -220,40 +246,38 @@
             </div>
           </div>
           <a class="post-link" href="/diseno-web/usar-ligaturas-en-tipografia-web/"></a> 
-        </li>
+        </article>
       
     
-  </ul>
+</section>
 
-<!--   <p class="rss-subscribe"><a href="/feed.xml">feed RSS</a></p> -->
-
-</div>
-
-        </div>
       </div>
       <div class="idr-separador"><hr/><span>}</span></div>
       <footer>
+  <section>
+    <h1 class="esconder">Pie de página</h1>
+    <div class="footer-inner">  
 
-  <div class="footer-inner">
-
-    <div class="footer-descripcion">
-      <p class="text">Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
+      <section class="footer-descripcion">
+        <h1 class="esconder">Descripción del sitio</h1>
+        <p class="text">Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
 </p>
+      </section>  
+
+  <!--     <div class="footer-contacto">
+        <ul>
+          <li>idiazroncero</li>
+          <li><a href="mailto:idiaz.roncero@gmail.com">idiaz.roncero@gmail.com</a></li>
+        </ul>
+      </div> <--> </-->
+
+  		<section class="footer-reconocimientos">
+        <h1 class="esconder">Reconocimientos</h1>
+  			<p>Este blog se basa en <a href="http://jekyllrb.com/">Jekyll</a> y usa <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://sass-lang.com/">Sass</a> y <a href="http://compass-style.org/">Compass</a>. Las tipografías son <a href="http://calendasplus.com/">Calendas Plus</a> y <a href="http://fontfabric.com/nexa-free-font/">Nexa</a>.
+  		</section>
+
     </div>
-
-<!--     <div class="footer-contacto">
-      <ul>
-        <li>idiazroncero</li>
-        <li><a href="mailto:idiaz.roncero@gmail.com">idiaz.roncero@gmail.com</a></li>
-      </ul>
-    </div> -->
-
-		<div class="footer-reconocimientos">
-			<p>Este blog se basa en <a href="http://jekyllrb.com/">Jekyll</a> y usa <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://sass-lang.com/">Sass</a> y <a href="http://compass-style.org/">Compass</a>. Las tipografías son <a href="http://calendasplus.com/">Calendas Plus</a> y <a href="http://fontfabric.com/nexa-free-font/">Nexa</a>.
-		</div>
-
-  </div>
-
+  </section>
 </footer>
 
 

@@ -84,31 +84,20 @@
 
   <body>
     <div class="container">
-
       <header class="header">
 	<div class="idr" >
 		<h1>
 			<a href="/">
-				<span class="idr-i">i</span><span class="idr-id">
-				d</span><span class="idr-idi">i</span><span class="idr-idia">
-				a</span><span class="idr-idiaz">
-				z</span><span class="idr-idiaz_">
-				.</span><span class="idr-idiaz_r">
-				r</span><span class="idr-idiaz_ro">
-				o</span><span class="idr-idiaz_ron">
-				n</span><span class="idr-idiaz_ronc">
-				c</span><span class="idr-idiaz_ronce">
-				e</span><span class="idr-idiaz_roncer">
-				r</span><span class="idr-idiaz_roncero">
-				o</span>
+				<span class="idr-i">i</span><span class="idr-id">d</span><span class="idr-idi">i</span><span class="idr-idia">a</span><span class="idr-idiaz">z</span><span class="idr-idiaz_">.</span><span class="idr-idiaz_r">r</span><span class="idr-idiaz_ro">o</span><span class="idr-idiaz_ron">n</span><span class="idr-idiaz_ronc">c</span><span class="idr-idiaz_ronce">e</span><span class="idr-idiaz_roncer">r</span><span class="idr-idiaz_roncero">o</span>
 			</a>
 		</h1>
 		<span class="idr-motto">Diseño web, periodismo, política y otras parafilias</span>
 	</div>
 
 	<nav class="mainmenu">
+		<h1 class="esconder">Menú principal</h1>
 		<div class="version">
-			<p id="version-num">beta 0.6</p>
+			<p id="version-num">beta 0.7</p>
 <!-- 			<div class="version-log">
 				<p>¡estamos en beta!</p>
 				<p>Últimos cambios:</p>
@@ -125,30 +114,64 @@
 			
 				 
 				<li><a href="/autobombo">
+
+
 	
-		autobombo
+
 	
+
+
+
+	autobombo
+
+
 </a></li>
 			
 				 
 				<li><a href="/apps">
+
+
 	
-		apps
+
 	
+
+
+
+	apps
+
+
 </a></li>
 			
 				 
 				<li><a href="/diseno-web">
+
+
 	
 		diseño web
+		
 	
+
+	
+
+
+
+
 </a></li>
 			
 				 
 				<li><a href="/politica">
+
+
 	
-		politica
+
 	
+		política
+		
+	
+
+
+
+
 </a></li>
 			
 		</ul>
@@ -167,17 +190,17 @@
 	</nav>
 </header>
       <div class="idr-separador"><hr/><span>{</span></div>
-      <div class="content">
+      <main class="content" role="main">
         <div class="content-wrapper">
-          <div class="category">
+          <section class="category">
 
   <header class="category-header">
     <h1 class="category-title">Autobombo</h1>
   </header>
 
-  <article class="category-content">
+  <div class="category-content">
   	
-  		<div class="post-archive">
+  		<article class="post-archive">
         
           <div class="post-archive-img">
             <img src="/images/default.jpg" alt="Unas palabras sobre idiaz.roncero" title=""/>
@@ -189,36 +212,39 @@
 
 </p>
         </div>
-  		</div>
+  		</article>
   	
-  </article>
-
-</div>
-        </div>
-      </div>
-      <div class="idr-separador"><hr/><span>}</span></div>
-      <footer>
-
-  <div class="footer-inner">
-
-    <div class="footer-descripcion">
-      <p class="text">Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
-</p>
-    </div>
-
-<!--     <div class="footer-contacto">
-      <ul>
-        <li>idiazroncero</li>
-        <li><a href="mailto:idiaz.roncero@gmail.com">idiaz.roncero@gmail.com</a></li>
-      </ul>
-    </div> -->
-
-		<div class="footer-reconocimientos">
-			<p>Este blog se basa en <a href="http://jekyllrb.com/">Jekyll</a> y usa <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://sass-lang.com/">Sass</a> y <a href="http://compass-style.org/">Compass</a>. Las tipografías son <a href="http://calendasplus.com/">Calendas Plus</a> y <a href="http://fontfabric.com/nexa-free-font/">Nexa</a>.
-		</div>
-
   </div>
 
+</section>
+        </div>
+      </main>
+      <div class="idr-separador"><hr/><span>}</span></div>
+      <footer>
+  <section>
+    <h1 class="esconder">Pie de página</h1>
+    <div class="footer-inner">  
+
+      <section class="footer-descripcion">
+        <h1 class="esconder">Descripción del sitio</h1>
+        <p class="text">Un blog absolutamente desnortado en el que un día se habla de CSS3 y al siguiente de política iraní.
+</p>
+      </section>  
+
+  <!--     <div class="footer-contacto">
+        <ul>
+          <li>idiazroncero</li>
+          <li><a href="mailto:idiaz.roncero@gmail.com">idiaz.roncero@gmail.com</a></li>
+        </ul>
+      </div> <--> </-->
+
+  		<section class="footer-reconocimientos">
+        <h1 class="esconder">Reconocimientos</h1>
+  			<p>Este blog se basa en <a href="http://jekyllrb.com/">Jekyll</a> y usa <a href="http://susy.oddbird.net/">Susy</a>, <a href="http://sass-lang.com/">Sass</a> y <a href="http://compass-style.org/">Compass</a>. Las tipografías son <a href="http://calendasplus.com/">Calendas Plus</a> y <a href="http://fontfabric.com/nexa-free-font/">Nexa</a>.
+  		</section>
+
+    </div>
+  </section>
 </footer>
 
 
